@@ -17,19 +17,23 @@ const submit = () => {
       class="w-full h-full px-5 outline-none placeholder:text-black/20"
       placeholder="검색어를 입력해주세요"
     >
-    <div class="absolute right-0 top-0 bottom-0 flex">
+    <div class="absolute right-0 top-0 bottom-0 flex pointer-events-none">
       <div
         :class="text.length === 0 ? 'opacity-0' : 'opacity-20'"
         class="input-element w-[30px]"
       >
-        <VueSpinnerTail :size="25" />
+        <VueSpinnerTail
+          :size="25"
+        />
       </div>
       <div
         :class="text.length === 0 ? 'scale-90 opacity-10' : 'scale-105 opacity-70'"
-        class="input-element w-[50px]"
+        class="input-element w-[50px] pointer-events-auto"
         @click="text = ''"
       >
-        &#x2716;
+        <span class="cursor-pointer">
+          &#x2716;
+        </span>
       </div>
     </div>
   </form>
