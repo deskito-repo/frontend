@@ -31,4 +31,4 @@ jobs:
         firebaseServiceAccount: "${{ secrets.GCP_CREDENTIALS_KEY }}"
         expires: 7d
         projectId: ${{ env.PROJECT_ID }}
-        channelId: 'pr-${{ github.event.number }}-${{ github.event.pull_request.head.ref }}'
+        channelId: 'pr-${{ github.job_workflow_sha }}'
