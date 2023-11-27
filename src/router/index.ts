@@ -2,6 +2,6 @@ import * as VueRouter from 'vue-router';
 import routes from './routes';
 
 export default VueRouter.createRouter({
-  history: VueRouter.createWebHashHistory(),
+  history: VueRouter.createWebHistory(),
   routes,
 });
