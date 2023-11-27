@@ -1,10 +1,9 @@
 <script lang="ts" setup>
 import { VueSpinnerTail } from 'vue3-spinners';
+import { useDialog } from 'src/composables/useDialog';
 
 const text = defineModel<string>({ required: true });
-const submit = () => {
-  console.log('z'); /* @DELETE  */
-};
+const submit = () => useDialog().alert('submit testing');
 </script>
 <template>
   <form
