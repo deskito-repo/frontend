@@ -27,6 +27,7 @@ const submit = () => {
       <div
         :class="text.length === 0 ? 'scale-90 text-opacity-10' : 'scale-105 text-opacity-70'"
         class="input-element"
+        @click="text = ''"
       >
         &#x2716;
       </div>
