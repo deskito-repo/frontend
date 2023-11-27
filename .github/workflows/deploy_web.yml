@@ -23,7 +23,6 @@ jobs:
         npm i -g pnpm
         pnpm i --prod
         pnpm build
-        ls
 
     - uses: FirebaseExtended/action-hosting-deploy@v0
       with:
@@ -31,4 +30,4 @@ jobs:
         firebaseServiceAccount: "${{ secrets.GCP_CREDENTIALS_KEY }}"
         expires: 7d
         projectId: ${{ env.PROJECT_ID }}
-        channelId: 'pr-${{ github.job_workflow_sha }}'
+        channelId: live
