@@ -20,13 +20,13 @@ const submit = () => {
     <div class="absolute right-0 top-0 bottom-0 flex">
       <div
         :class="text.length === 0 ? 'opacity-0' : 'opacity-20'"
-        class="input-element"
+        class="input-element w-[30px]"
       >
-        <VueSpinnerTail :size="30" />
+        <VueSpinnerTail :size="25" />
       </div>
       <div
         :class="text.length === 0 ? 'scale-90 opacity-10' : 'scale-105 opacity-70'"
-        class="input-element"
+        class="input-element w-[50px]"
         @click="text = ''"
       >
         &#x2716;
@@ -36,6 +36,6 @@ const submit = () => {
 </template>
 <style lang="scss" scoped>
 .input-element {
-    @apply w-[50px] h-full flex items-center justify-center text-black transition-all ease-out
+    @apply h-full flex items-center justify-center text-black transition-all ease-out
 }
 </style>
