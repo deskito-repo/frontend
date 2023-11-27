@@ -3,17 +3,16 @@ import SearchBar from 'src/components/SearchBar/SearchBar.vue';
 import { ref } from 'vue';
 
 const searchText = ref('');
-const searchBar = ref<typeof SearchBar>();
 </script>
 <template>
   <div class="bg-slate-100">
-    <div class="py-10">
-      {{ searchBar?.__defaults }}
-      <SearchBar
-        ref="searchBar"
-        v-model="searchText"
-        class="m-auto"
-      />
+    <div class="px-5">
+      <div class="py-10">
+        <SearchBar
+          v-model="searchText"
+          class="m-auto"
+        />
+      </div>
     </div>
   </div>
 </template>

@@ -25,7 +25,7 @@ const submit = () => {
         <VueSpinnerTail :size="30" />
       </div>
       <div
-        :class="text.length === 0 ? 'scale-90 text-opacity-10' : 'scale-105 text-opacity-70'"
+        :class="text.length === 0 ? 'scale-90 opacity-10' : 'scale-105 opacity-70'"
         class="input-element"
         @click="text = ''"
       >
