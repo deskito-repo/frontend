@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --color-primary: hsl(221, 70%, 36%);
+}
+
+html,
+body,
+#app,
+[page] {
+    @apply w-full h-full
+}
