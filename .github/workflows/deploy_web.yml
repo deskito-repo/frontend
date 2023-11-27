@@ -1,0 +1,31 @@
+name: Deploy Web App
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - '.gitignore'
+      - '.vscode'
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    env:
+      PROJECT_ID: deskito
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v1
+      with:
+        node-version: 20
+    
+    - run: -|
+        npm i -g pnpm
+        pnpm i --prod
+        pnpm build
+
+    - uses: FirebaseExtended/action-hosting-deploy@v0
+      with:
+        repoToken: "${{ secrets.SSH_KEY }}"
+        firebaseServiceAccount: "${{ secrets.GCP_CREDENTIALS_KEY }}"
+        expires: 7d
+        projectId: ${{ env.PROJECT_ID }}

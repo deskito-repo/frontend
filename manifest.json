@@ -1,0 +1,15 @@
+{
+    "manifest_version": 3,
+    "name": "desktop-app",
+    "version": "0.0.1",
+    "description": "wallpaper for browser",
+    "chrome_url_overrides": {
+        "newtab": "index.html"
+    },
+    "permissions": [
+      "https://functions-suggest-query-proxy-qkuv642xcq-du.a.run.app/*",
+      "tabs",
+      "storage",
+      "history"
+    ]
+}
