@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { useFocus } from '@vueuse/core';
-import SearchBar from 'src/components/SearchBar/SearchBar.vue';
-import SearchCircleBar from 'src/components/SearchBar/SearchCircleBar.vue';
+import SearchBar from 'src/components/Search/SearchBar.vue';
+import SearchCircleBar from 'src/components/Search/SearchCircleBar.vue';
 import { useDeviceSize } from 'src/composables/useDeviceSize';
 import { onMounted, ref } from 'vue';
 
