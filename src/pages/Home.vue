@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { useFocus } from '@vueuse/core';
 import SearchBar from 'src/components/SearchBar/SearchBar.vue';
 import SearchCircleBar from 'src/components/SearchBar/SearchCircleBar.vue';
 import { useDeviceSize } from 'src/composables/useDeviceSize';
@@ -7,6 +8,7 @@ import { onMounted, ref } from 'vue';
 const { isMobile } = useDeviceSize();
 const searchText = ref('');
 const searchInputElement = ref<HTMLInputElement>();
+const { focused: focusedOnSearchInput } = useFocus(searchInputElement);
 onMounted(() => {
   searchInputElement.value?.focus();
 });
@@ -24,7 +26,7 @@ onMounted(() => {
     </div>
     <div class="bottom-side">
       <SearchCircleBar
-        v-if="isMobile"
+        v-if="isMobile && !focusedOnSearchInput"
         @click="searchInputElement?.focus()"
       />
     </div>
