@@ -1,10 +1,19 @@
 <script lang="ts" setup>
-import { ref } from 'vue';
+import { ref, watch } from 'vue';
+import { HistoryTrap } from 'src/utils/HistoryTrap';
 import SearchBar from './SearchBar.vue';
 import SearchList from './SearchList.vue';
 
 const isShow = defineModel<boolean>('show');
 const searchText = ref('');
+let historyTrap: HistoryTrap;
+watch(isShow, (show) => {
+  if (!show) {
+    return;
+  }
+  historyTrap = new HistoryTrap('searchbox');
+  historyTrap.onCatch(() => { isShow.value = false; });
+});
 </script>
 <template>
   <div
