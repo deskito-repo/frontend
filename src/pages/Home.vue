@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import SearchBar from 'src/components/SearchBar/SearchBar.vue';
-import SearchHistoryBox from 'src/components/SearchHistoryBox/SearchHistoryBox.vue';
 import { onMounted, ref } from 'vue';
 
 const searchText = ref('');
@@ -18,7 +17,6 @@ onMounted(() => {
           v-model="searchText"
           class="m-auto"
         />
-        <SearchHistoryBox />
       </div>
     </div>
   </div>
