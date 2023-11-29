@@ -1,9 +1,10 @@
 <script lang="ts" setup>
 import { VueSpinnerTail } from 'vue3-spinners';
-import { useDialog } from 'src/composables/useDialog';
+import { useSearchStore } from 'src/stores/useSearchStore';
 
+const { search } = useSearchStore();
 const text = defineModel<string>({ required: true });
-const submit = () => useDialog().alert('submit testing');
+const submit = () => search(text.value);
 const inputElement = defineModel<HTMLInputElement>('inputElement');
 </script>
 <template>
