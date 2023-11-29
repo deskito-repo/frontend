@@ -9,6 +9,7 @@ const { isMobile } = useDeviceSize();
 const searchText = ref('');
 const searchInputElement = ref<HTMLInputElement>();
 const { focused: focusedOnSearchInput } = useFocus(searchInputElement);
+
 onMounted(() => {
   searchInputElement.value?.focus();
 });
