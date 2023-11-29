@@ -1,14 +1,22 @@
 <script lang="ts" setup>
 import { useFocus } from '@vueuse/core';
 import SearchBar from 'src/components/Search/SearchBar.vue';
+import SearchBox from 'src/components/Search/SearchBox.vue';
 import SearchCircleBar from 'src/components/Search/SearchCircleBar.vue';
 import { useDeviceSize } from 'src/composables/useDeviceSize';
-import { onMounted, ref } from 'vue';
+import { watch, onMounted, ref } from 'vue';
 
 const { isMobile } = useDeviceSize();
 const searchText = ref('');
 const searchInputElement = ref<HTMLInputElement>();
 const { focused: focusedOnSearchInput } = useFocus(searchInputElement);
+const isShowSearchBox = ref(false);
+watch(focusedOnSearchInput, (isFocused) => {
+  if (!isFocused) {
+    return;
+  }
+  isShowSearchBox.value = true;
+});
 
 onMounted(() => {
   searchInputElement.value?.focus();
@@ -25,10 +33,15 @@ onMounted(() => {
         />
       </div>
     </div>
-    <div class="bottom-side">
-      <SearchCircleBar
-        v-if="isMobile && !focusedOnSearchInput"
-        @click="searchInputElement?.focus()"
+    <div v-if="isMobile">
+      <div class="bottom-side">
+        <SearchCircleBar
+          v-if="!focusedOnSearchInput"
+          @click="searchInputElement?.focus()"
+        />
+      </div>
+      <SearchBox
+        v-model:show="isShowSearchBox"
       />
     </div>
   </div>
