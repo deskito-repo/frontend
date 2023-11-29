@@ -4,6 +4,7 @@ import { useDialog } from 'src/composables/useDialog';
 
 const text = defineModel<string>({ required: true });
 const submit = () => useDialog().alert('submit testing');
+const inputElement = defineModel<HTMLInputElement>('inputElement');
 </script>
 <template>
   <form
@@ -11,6 +12,7 @@ const submit = () => useDialog().alert('submit testing');
     @submit.prevent="submit"
   >
     <input
+      ref="inputElement"
       v-model="text"
       :maxlength="250"
       class="w-full h-full px-5 outline-none placeholder:text-black/20"
