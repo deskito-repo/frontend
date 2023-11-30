@@ -1,11 +1,13 @@
 <script lang="ts" setup>
 import { ref, watch, nextTick } from 'vue';
 import { HistoryTrap } from 'src/utils/HistoryTrap';
+import { useSearchStore } from 'src/stores/useSearchStore';
+import { storeToRefs } from 'pinia';
 import SearchBar from './SearchBar.vue';
 import SearchList from './SearchList.vue';
 
 const isShow = defineModel<boolean>('show');
-const searchText = ref('');
+const { searchText } = storeToRefs(useSearchStore());
 const searchInputElement = ref<HTMLInputElement>();
 let historyTrap: HistoryTrap;
 watch(isShow, (show) => {

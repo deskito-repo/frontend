@@ -1,13 +1,15 @@
 <script lang="ts" setup>
 import { useFocus } from '@vueuse/core';
+import { storeToRefs } from 'pinia';
 import SearchBar from 'src/components/Search/SearchBar.vue';
 import SearchBox from 'src/components/Search/SearchBox.vue';
 import SearchCircleBar from 'src/components/Search/SearchCircleBar.vue';
 import { useDeviceSize } from 'src/composables/useDeviceSize';
+import { useSearchStore } from 'src/stores/useSearchStore';
 import { watch, onMounted, ref } from 'vue';
 
 const { isMobile } = useDeviceSize();
-const searchText = ref('');
+const { searchText } = storeToRefs(useSearchStore());
 const searchInputElement = ref<HTMLInputElement>();
 const { focused: focusedOnSearchInput } = useFocus(searchInputElement);
 const isShowSearchBox = ref(false);
