@@ -4,6 +4,7 @@ import { storeToRefs } from 'pinia';
 import SearchBar from 'src/components/Search/SearchBar.vue';
 import SearchBox from 'src/components/Search/SearchBox.vue';
 import SearchCircleBar from 'src/components/Search/SearchCircleBar.vue';
+import StatusBar from 'src/components/StatusBar.vue';
 import { useDeviceSize } from 'src/composables/useDeviceSize';
 import { useSearchStore } from 'src/stores/useSearchStore';
 import { watch, onMounted, ref } from 'vue';
@@ -26,8 +27,9 @@ onMounted(() => {
 </script>
 <template>
   <div class="bg-slate-100">
+    <StatusBar />
     <div class="px-5">
-      <div class="py-10">
+      <div class="py-3">
         <SearchBar
           v-model:inputElement="searchInputElement"
           v-model="searchText"
