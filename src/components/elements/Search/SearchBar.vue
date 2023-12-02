@@ -2,12 +2,16 @@
 import { VueSpinnerTail } from 'vue3-spinners';
 import { useSearchStore } from 'src/stores/useSearchStore';
 import { useI18n } from 'vue-i18n';
+import { useSuggestionStore } from 'src/stores/useSuggestionStore';
+import { watchDebounced } from '@vueuse/core';
 
 const { t } = useI18n();
 const { search } = useSearchStore();
+const suggestionStore = useSuggestionStore();
 const text = defineModel<string>({ required: true });
 const submit = () => search(text.value);
 const inputElement = defineModel<HTMLInputElement>('inputElement');
+watchDebounced(() => text.value, (text) => text && suggestionStore.requestSuggest(text), { debounce: 200 });
 </script>
 <template>
   <form
@@ -21,6 +25,7 @@ const inputElement = defineModel<HTMLInputElement>('inputElement');
       class="w-full h-full px-5 outline-none placeholder:text-black/20"
       :placeholder="t('press_input')"
     >
+
     <div class="absolute right-0 top-0 bottom-0 flex pointer-events-none">
       <div
         :class="text.length === 0 ? 'opacity-0' : 'opacity-20'"

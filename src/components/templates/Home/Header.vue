@@ -4,6 +4,7 @@ import { storeToRefs } from 'pinia';
 import SearchBar from 'src/components/elements/Search/SearchBar.vue';
 import SearchBox from 'src/components/elements/Search/SearchBox.vue';
 import SearchCircleBar from 'src/components/elements/Search/SearchCircleBar.vue';
+import SuggestionBox from 'src/components/elements/Suggestion/SuggestionBox.vue';
 import SquareClockWidget from 'src/components/elements/Widgets/SquareClockWidget.vue';
 import { useDeviceSize } from 'src/composables/useDeviceSize';
 import { useSearchStore } from 'src/stores/useSearchStore';
@@ -37,6 +38,7 @@ onMounted(() => {
         v-model="searchText"
         class="m-auto"
       />
+      <SuggestionBox />
     </div>
   </div>
   <div v-if="isMobile">
