@@ -77,6 +77,9 @@ importers:
       vue3-spinners:
         specifier: ^1.2.2
         version: 1.2.2(vue@3.3.7)
+      wretch:
+        specifier: ^2.7.1
+        version: 2.7.1
     devDependencies:
       '@binochoi/eslint-config-typescript':
         specifier: ^0.0.12
@@ -3229,6 +3232,11 @@ packages:
 
   /wrappy@1.0.2:
     resolution: {integrity: sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==}
+
+  /wretch@2.7.1:
+    resolution: {integrity: sha512-laTmSy1T9lBaB8jwrF71S44xfoQhXxbXhpWFY3L7Yl51S62luuR69oRvDHmVVf1B62eWTcCnJVa0s4pWStuRCw==}
+    engines: {node: '>=14'}
+    dev: false
 
   /xml-name-validator@4.0.0:
     resolution: {integrity: sha512-ICP2e+jsHvAj2E2lIHxa5tjXRlKDJo4IdvPvCXbXQGdzSfmSpNVyIKMvoZHjDY9DP0zV17iI85o90vRFXNccRw==}

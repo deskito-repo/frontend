@@ -1,21 +1,19 @@
 import { defineStore } from 'pinia';
-import { useFetchApi } from 'src/composables/useFetchApi';
 import {
   computed, ref,
 } from 'vue';
 import { useTextCalculator } from 'src/composables/useTextCalculator';
+import { api } from 'src/utils/api';
 import { useSearchStore } from './useSearchStore';
 
 export const useSuggestionStore = defineStore('suggestion', () => {
   const suggestions = ref<any[]>([]);
 
-  const { api } = useFetchApi('/api/suggestion');
+  const abortController = new AbortController();
+  const base = api.url('/api/suggestion').signal(abortController);
   const requestSuggest = async (text: string) => {
-    const { data, error } = await api(text).json<any[]>();
-    if (error.value || data.value === null) {
-      return;
-    }
-    suggestions.value = data.value;
+    const data = await base.url(`/${text}`).get().json<any[]>();
+    suggestions.value = data;
   };
   const reset = () => { suggestions.value = []; };
 
