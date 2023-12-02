@@ -12,7 +12,6 @@ export default defineConfig({
       '/api': {
         target: 'http://monolith:4124',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, ''),
         secure: false,
         ws: true,
       },
