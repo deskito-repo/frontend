@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import StatusBar from 'src/components/elements/StatusBar/index.vue';
 import Header from './Header.vue';
-import Widgets from './Widgets.vue';
+// import Widgets from './Widgets.vue';
 </script>
 <template>
   <div
@@ -13,7 +13,7 @@ import Widgets from './Widgets.vue';
       <div class="mb-10">
         <Header />
       </div>
-      <Widgets />
+      <!-- <Widgets /> -->
     </div>
   </div>
 </template>
