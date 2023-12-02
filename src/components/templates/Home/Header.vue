@@ -9,7 +9,7 @@ import { useDeviceSize } from 'src/composables/useDeviceSize';
 import { useSearchStore } from 'src/stores/useSearchStore';
 import { watch, onMounted, ref } from 'vue';
 
-const { isMobile } = useDeviceSize();
+const { isDesktop, isMobile } = useDeviceSize();
 const { searchText } = storeToRefs(useSearchStore());
 const searchInputElement = ref<HTMLInputElement>();
 const { focused: focusedOnSearchInput } = useFocus(searchInputElement);
@@ -22,6 +22,9 @@ watch(focusedOnSearchInput, (isFocused) => {
 });
 
 onMounted(() => {
+  if (!isDesktop.value) {
+    return;
+  }
   searchInputElement.value?.focus();
 });
 </script>
