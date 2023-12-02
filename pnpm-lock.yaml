@@ -62,6 +62,9 @@ importers:
       vue:
         specifier: ^3.3.4
         version: 3.3.7(typescript@5.2.2)
+      vue-i18n:
+        specifier: ^9.4.1
+        version: 9.4.1(vue@3.3.7)
       vue-router:
         specifier: ^4.2.5
         version: 4.2.5(vue@3.3.7)
@@ -409,6 +412,27 @@ packages:
   /@humanwhocodes/object-schema@2.0.1:
     resolution: {integrity: sha512-dvuCeX5fC9dXgJn9t+X5atfmgQAzUOWqS1254Gh0m6i8wKd10ebXkfNKiRK+1GWi/yTvvLDHpoxLr0xxxeslWw==}
     dev: true
+
+  /@intlify/core-base@9.4.1:
+    resolution: {integrity: sha512-WIwx+elsZbxSMxRG5+LC+utRohFvmZMoDevfKOfnYMLbpCjCSavqTfHJAtfsY6ruowzqXeKkeLhRHbYbjoJx5g==}
+    engines: {node: '>= 16'}
+    dependencies:
+      '@intlify/message-compiler': 9.4.1
+      '@intlify/shared': 9.4.1
+    dev: false
+
+  /@intlify/message-compiler@9.4.1:
+    resolution: {integrity: sha512-aN2N+dUx320108QhH51Ycd2LEpZ+NKbzyQ2kjjhqMcxhHdxtOnkgdx+MDBhOy/CObwBmhC3Nygzc6hNlfKvPNw==}
+    engines: {node: '>= 16'}
+    dependencies:
+      '@intlify/shared': 9.4.1
+      source-map-js: 1.0.2
+    dev: false
+
+  /@intlify/shared@9.4.1:
+    resolution: {integrity: sha512-A51elBmZWf1FS80inf/32diO9DeXoqg9GR9aUDHFcfHoNDuT46Q+fpPOdj8jiJnSHSBh8E1E+6qWRhAZXdK3Ng==}
+    engines: {node: '>= 16'}
+    dev: false
 
   /@ionic/core@7.5.6:
     resolution: {integrity: sha512-bYQp2twwm61uA0Q31ToVIpQWsiQ9so1dRoWZPD+l+y4fVuFmOCLYeS6XTLTm73jVBq40JfEcsac7eYC4DxoemQ==}
@@ -3082,6 +3106,18 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /vue-i18n@9.4.1(vue@3.3.7):
+    resolution: {integrity: sha512-vnQyYE9LBuNOqPpETIcCaGnAyLEqfeIvDcyZ9T+WBCWFTqWw1J8FuF1jfeDwpHBi5JKgAwgXyq1mt8jp/x/GPA==}
+    engines: {node: '>= 16'}
+    peerDependencies:
+      vue: ^3.0.0
+    dependencies:
+      '@intlify/core-base': 9.4.1
+      '@intlify/shared': 9.4.1
+      '@vue/devtools-api': 6.5.1
+      vue: 3.3.7(typescript@5.2.2)
+    dev: false
 
   /vue-router@4.2.5(vue@3.3.7):
     resolution: {integrity: sha512-DIUpKcyg4+PTQKfFPX88UWhlagBEBEfJ5A8XDXRJLUnZOvcpMF8o/dnL90vpVkGaPbjvXazV/rC1qBKrZlFugw==}

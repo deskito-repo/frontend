@@ -1,8 +1,10 @@
 import { useGeolocation, usePermission, watchOnce } from '@vueuse/core';
 import { defineStore } from 'pinia';
 import { useDialog } from 'src/composables/useDialog';
+import { useI18n } from 'vue-i18n';
 
 export default defineStore('weather', () => {
+  const { t } = useI18n();
   const {
     resume, pause, coords, error,
   } = useGeolocation({ immediate: false, enableHighAccuracy: true });
@@ -12,7 +14,7 @@ export default defineStore('weather', () => {
   const getWeatherStatusInPlace = () => {
     resume();
     if (permission.value === 'denied') {
-      dialog.alert('브라우저에서 위치 권한을 허용해야 합니다.');
+      dialog.alert(t('need_browser_permission', { permission: 'geolocation' }));
       return;
     }
     if (error.value) {

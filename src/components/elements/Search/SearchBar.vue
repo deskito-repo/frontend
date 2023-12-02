@@ -1,7 +1,9 @@
 <script lang="ts" setup>
 import { VueSpinnerTail } from 'vue3-spinners';
 import { useSearchStore } from 'src/stores/useSearchStore';
+import { useI18n } from 'vue-i18n';
 
+const { t } = useI18n();
 const { search } = useSearchStore();
 const text = defineModel<string>({ required: true });
 const submit = () => search(text.value);
@@ -17,7 +19,7 @@ const inputElement = defineModel<HTMLInputElement>('inputElement');
       v-model="text"
       :maxlength="250"
       class="w-full h-full px-5 outline-none placeholder:text-black/20"
-      placeholder="검색어를 입력해주세요"
+      :placeholder="t('press_input')"
     >
     <div class="absolute right-0 top-0 bottom-0 flex pointer-events-none">
       <div
