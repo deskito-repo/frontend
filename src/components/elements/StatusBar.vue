@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import useWeatherStore from 'src/stores/useWeatherStore';
-import CloudIcon from './common/icons/CloudIcon.vue';
+import CloudIcon from 'src/components/common/icons/CloudIcon.vue';
 
 const { getWeatherStatusInPlace } = useWeatherStore();
 </script>
