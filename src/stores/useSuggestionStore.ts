@@ -12,7 +12,10 @@ export const useSuggestionStore = defineStore('suggestion', () => {
   const abortController = new AbortController();
   const base = api.url('/api/suggestion').signal(abortController);
   const requestSuggest = async (text: string) => {
-    const data = await base.url(`/${text}`).get().json<any[]>();
+    const data = await base.url(`/${text}`).get().json<string[]>();
+    if (!data) {
+      return;
+    }
     suggestions.value = data;
   };
   const reset = () => { suggestions.value = []; };
