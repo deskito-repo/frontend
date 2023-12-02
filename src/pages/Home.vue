@@ -29,7 +29,7 @@ onMounted(() => {
   <div class="bg-slate-100">
     <StatusBar />
     <div class="px-5">
-      <div class="py-3">
+      <div class="py-4">
         <SearchBar
           v-model:inputElement="searchInputElement"
           v-model="searchText"
