@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import StatusBar from 'src/components/elements/StatusBar.vue';
 import Header from './Header.vue';
 import Widgets from './Widgets.vue';
 </script>
@@ -8,6 +9,7 @@ import Widgets from './Widgets.vue';
     style="overflow-y: auto"
   >
     <div class="max-w-7xl m-auto">
+      <StatusBar />
       <div class="mb-10">
         <Header />
       </div>
