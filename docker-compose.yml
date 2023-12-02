@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   app:
-    container_name: app
+    container_name: deskito-app
     build:
       dockerfile: ci/Dockerfile.dev
     ports:
@@ -15,8 +15,8 @@ services:
     command: pnpm dev
     platform: linux/amd64
     networks:
-      - app-net
+      - deskito
 
 networks:
-  app-net:
+  deskito:
     external: true

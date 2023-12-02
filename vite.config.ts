@@ -7,6 +7,17 @@ import copyFiles from 'rollup-plugin-copy';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  server: {
+    proxy: {
+      '/api': {
+        target: 'http://monolith:4124',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ''),
+        secure: false,
+        ws: true,
+      },
+    },
+  },
   plugins: [
     vue({
       script: {
