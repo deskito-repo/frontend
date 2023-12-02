@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 :root {
-    --color-primary: hsl(221, 70%, 36%);
+    --text-color: 0, 0%, 12%;
+    --bg-home-color: 210, 40%, 96%;
 }
 
 * {
@@ -18,6 +19,7 @@ body,
 [page] {
     padding: 0 !important;
     @apply w-full h-full overflow-hidden;
+    color: hsl(var(--text-color));
 }
 
 

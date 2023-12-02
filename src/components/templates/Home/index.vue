@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-import StatusBar from 'src/components/elements/StatusBar.vue';
+import StatusBar from 'src/components/elements/StatusBar/index.vue';
 import Header from './Header.vue';
 import Widgets from './Widgets.vue';
 </script>
 <template>
   <div
-    class="bg-slate-100"
+    class="bg-[hsl(var(--bg-home-color))]"
     style="overflow-y: auto"
   >
     <div class="max-w-7xl m-auto">
