@@ -8,9 +8,12 @@
         ],
         "rewrites": [
             {
-                "source": "/api/**",
-                "destination": "https://monolithic-wrm4l7anhq-du.a.run.app",
-                "type": 301
+                "source": "/api",
+                "run": {
+                    "serviceId": "monolithic",
+                    "region": "asia-northeast3",
+                    "pinTag": true
+                }
             },
             {
                 "source": "!/api/**",
