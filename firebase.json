@@ -10,6 +10,11 @@
             {
                 "source": "**",
                 "destination": "/index.html"
+            },
+            {
+              "source": "/api/**",
+              "destination": "https://monolithic-wrm4l7anhq-du.a.run.app",
+              "type": 301
             }
         ]
     }
