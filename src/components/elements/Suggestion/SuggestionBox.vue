@@ -9,7 +9,7 @@ const { list } = storeToRefs(useSuggestionStore());
 <template>
   <div class="max-w-xl m-auto relative">
     <SlideYUpTransition
-      duration="100"
+      :duration="100"
     >
       <div
         v-show="list.length"
