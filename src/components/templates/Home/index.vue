@@ -4,8 +4,12 @@ import Widgets from './Widgets.vue';
 </script>
 <template>
   <div class="bg-slate-100">
-    <Header />
-    <Widgets />
+    <div class="max-w-7xl m-auto">
+      <div class="mb-10">
+        <Header />
+      </div>
+      <Widgets />
+    </div>
   </div>
 </template>
 <style lang="scss" scoped>
