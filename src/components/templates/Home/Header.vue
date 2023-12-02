@@ -38,7 +38,7 @@ onMounted(() => {
         v-model="searchText"
         class="m-auto"
       />
-      <SuggestionBox />
+      <SuggestionBox v-if="isDesktop" />
     </div>
   </div>
   <div v-if="isMobile">
