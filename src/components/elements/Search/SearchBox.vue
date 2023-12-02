@@ -4,7 +4,7 @@ import { HistoryTrap } from 'src/utils/HistoryTrap';
 import { useSearchStore } from 'src/stores/useSearchStore';
 import { storeToRefs } from 'pinia';
 import SearchBar from './SearchBar.vue';
-import SearchList from './SearchList.vue';
+import SuggestionList from '../Suggestion/SuggestionList.vue';
 
 const isShow = defineModel<boolean>('show');
 const { searchText } = storeToRefs(useSearchStore());
@@ -30,7 +30,7 @@ watch(isShow, (show) => {
       class="rounded-none"
     />
     <div class="overflow-y-auto h-full">
-      <SearchList v-if="isShow" />
+      <SuggestionList v-if="isShow" />
     </div>
   </div>
 </template>

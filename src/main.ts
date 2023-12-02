@@ -5,6 +5,7 @@ import messages, { locales, type Locale } from './i18n';
 import App from './App.vue';
 import router from './router';
 import './main.scss';
+import '@noction/vue-bezier/dist/style.css';
 
 const app = createApp(App)
   .use(createPinia())

@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import '@noction/vue-bezier/dist/style.css';
+
 :root {
     --text-color: 0, 0%, 12%;
     --bg-home-color: 210, 40%, 96%;
