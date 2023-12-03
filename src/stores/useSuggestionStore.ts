@@ -3,16 +3,17 @@ import {
   computed, ref,
 } from 'vue';
 import { useTextCalculator } from 'src/composables/useTextCalculator';
-import { api } from 'src/utils/api';
+import { defineApi } from 'src/utils/defineApi';
 import { useSearchStore } from './useSearchStore';
 
 export const useSuggestionStore = defineStore('suggestion', () => {
   const suggestions = ref<any[]>([]);
 
-  const abortController = new AbortController();
-  const base = api.url('/api/suggestion').signal(abortController);
+  const { api, abort } = defineApi('/api/suggestion');
+
   const requestSuggest = async (text: string) => {
-    const data = await base.url(`/${text}`).get().json<string[]>();
+    abort();
+    const data = await api(`/${text}`).get().json<string[]>();
     if (!data) {
       return;
     }

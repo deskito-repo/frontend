@@ -4,6 +4,7 @@ import { useRouter } from 'vue-router';
 import { retry } from 'wretch/middlewares';
 
 const router = useRouter();
+
 wretch().middlewares([
   retry({
     delayTimer: 500,
@@ -21,6 +22,19 @@ const base = wretch()
     return r;
   });
 
+const defineApi = (baseUri = '') => {
+  let controller: AbortController;
+  return {
+    api: (uri = '') => {
+      controller = new AbortController();
+      return base
+        .url(baseUri)
+        .url(uri)
+        .signal(controller);
+    },
+    abort: () => controller?.abort(),
+  };
+};
 export {
-  base as api,
+  defineApi,
 };
