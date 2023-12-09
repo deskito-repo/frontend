@@ -18,12 +18,13 @@ const themeOverrides: ButtonThemeOverrides = {
 const globalOverrides: GlobalThemeOverrides = {
   common: {
     primaryColor: 'hsl(var(--color-primary))',
-    borderColor: 'black',
   },
 };
+// eslint-disable-next-line no-underscore-dangle
+const _globalOverrides = globalOverrides as any;
 </script>
 <template>
-  <NConfigProvider :theme="globalOverrides as any">
+  <NConfigProvider :theme="_globalOverrides">
     <NButton
       class="w-full"
       v-bind="{
