@@ -17,6 +17,10 @@
     user-select: none;
 }
 
+a {
+    @apply hover:underline cursor-pointer
+}
+
 html,
 body,
 #app,

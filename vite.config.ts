@@ -2,6 +2,7 @@ import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import * as path from 'path';
 import Components from 'unplugin-vue-components/vite';
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers';
 import { VantResolver } from '@vant/auto-import-resolver';
 import copyFiles from 'rollup-plugin-copy';
 
@@ -24,7 +25,10 @@ export default defineConfig({
       },
     }),
     Components({
-      resolvers: [VantResolver()],
+      resolvers: [
+        VantResolver(),
+        ElementPlusResolver(),
+      ],
     }),
 
     copyFiles({

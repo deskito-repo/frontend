@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import Button from 'src/components/common/Button.vue';
+import CheckBox from 'src/components/common/CheckBox.vue';
 import Input from 'src/components/common/Input.vue';
 import { useDialog } from 'src/composables/useDialog';
 import { reactive } from 'vue';
@@ -35,9 +36,11 @@ const submit = () => {
         type: 'password'
       }"
     />
-    <div class="flex justify-between">
-      <div>Remember me</div>
-      <div>Forgot password?</div>
+    <div class="flex justify-between items-center gap-3">
+      <CheckBox>Remember Me</CheckBox>
+      <a class="text-primary text-opacity-70 hover:text-opacity-100 transition-all">
+        Forgot password?
+      </a>
     </div>
     <Button
       :attrs="{
@@ -49,7 +52,7 @@ const submit = () => {
     </Button>
     <div>
       Don't have an account yet?
-      <span>Sign up</span>
+      <a class="text-[1.05rem] text-primary text-opacity-70 hover:text-opacity-100 transition-all">Sign up</a>
     </div>
   </form>
 </template>
