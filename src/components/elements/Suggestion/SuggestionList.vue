@@ -25,7 +25,7 @@ const { list } = storeToRefs(useSuggestionStore());
           class="row text-blue-500"
         >
           <CalculateIcon />
-          <span>
+          <span class="text">
             = {{ text }}
           </span>
         </div>
@@ -34,7 +34,7 @@ const { list } = storeToRefs(useSuggestionStore());
           class="row"
         >
           <TextIcon class="w-[24px]" />
-          <span>
+          <span class="text">
             {{ text }}
           </span>
         </div>
@@ -45,5 +45,8 @@ const { list } = storeToRefs(useSuggestionStore());
 <style lang="scss" scoped>
 .row {
     @apply flex items-center gap-4;
+}
+.text {
+  @apply text-ellipsis whitespace-nowrap overflow-hidden flex-1;
 }
 </style>
