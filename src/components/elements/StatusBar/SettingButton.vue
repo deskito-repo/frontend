@@ -7,7 +7,7 @@ import SettingIcon from 'src/components/common/icons/SettingIcon.vue';
       class="flex gap-2 justify-center items-center"
     >
       <SettingIcon
-        style="color: hsl(var(--text-color), .7)"
+        style="color: hsl(var(--color-primary), .7)"
         class="w-[22px]"
       />
     </div>

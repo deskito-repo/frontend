@@ -5,8 +5,10 @@ import Header from './Header.vue';
 </script>
 <template>
   <div
-    class="bg-[hsl(var(--bg-home-color))]"
-    style="overflow-y: auto"
+    style="
+      overflow-y: auto;
+      background-color: hsla(var(--color-primary), .15)
+    "
   >
     <div class="max-w-7xl m-auto">
       <StatusBar />

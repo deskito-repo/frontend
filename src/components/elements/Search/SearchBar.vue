@@ -3,7 +3,7 @@ import { VueSpinnerTail } from 'vue3-spinners';
 import { useSearchStore } from 'src/stores/useSearchStore';
 import { useI18n } from 'vue-i18n';
 import { useSuggestionStore } from 'src/stores/useSuggestionStore';
-import { watchDebounced } from '@vueuse/core';
+import { useFocus, watchDebounced } from '@vueuse/core';
 
 const { t } = useI18n();
 const { search } = useSearchStore();
@@ -12,20 +12,21 @@ const text = defineModel<string>({ required: true });
 const submit = () => search(text.value);
 const inputElement = defineModel<HTMLInputElement>('inputElement');
 watchDebounced(() => text.value, (text) => text && suggestionStore.requestSuggest(text), { debounce: 200 });
+const { focused } = useFocus(inputElement);
 </script>
 <template>
   <form
-    class="max-w-xl h-[60px] relative shadow-md rounded-2xl ring-1 ring-[#dedede7c] overflow-hidden bg-white"
+    :class="focused ? ['ring-opacity-50'] : ['ring-opacity-30']"
+    class="max-w-xl h-[60px] relative rounded-2xl ring-1 ring-primary overflow-hidden bg-primary bg-opacity-10 transition-all"
     @submit.prevent="submit"
   >
     <input
       ref="inputElement"
       v-model="text"
       :maxlength="250"
-      class="w-full h-full px-5 outline-none placeholder:text-black/20"
+      class="w-full h-full px-5 transition-all outline-none placeholder:text-primary placeholder:text-opacity-40 bg-inherit text-primary"
       :placeholder="t('press_input')"
     >
-
     <div class="absolute right-0 top-0 bottom-0 flex pointer-events-none">
       <div
         :class="text.length === 0 ? 'opacity-0' : 'opacity-20'"
@@ -40,7 +41,7 @@ watchDebounced(() => text.value, (text) => text && suggestionStore.requestSugges
         class="input-element w-[50px] pointer-events-auto"
         @click="text = ''"
       >
-        <span class="cursor-pointer">
+        <span class="cursor-pointer text-primary">
           &#x2716;
         </span>
       </div>

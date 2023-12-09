@@ -23,6 +23,7 @@
     "dayjs": "^1.11.10",
     "drizzle-kit": "^0.20.6",
     "drizzle-orm": "^0.29.1",
+    "naive-ui": "^2.35.0",
     "pinia": "^2.1.7",
     "rollup-plugin-copy": "^3.5.0",
     "sass": "^1.69.4",

@@ -1,9 +1,11 @@
 <script lang="ts" setup>
 import { ref, onMounted } from 'vue';
 import { FadeTransition } from '@noction/vue-bezier';
+import useLoginModal from 'src/composables/useLoginModal';
 import WeatherButton from './WeatherButton.vue';
 import SettingButton from './SettingButton.vue';
 
+const loginModal = useLoginModal();
 const isMounted = ref(false);
 onMounted(() => {
   isMounted.value = true;
@@ -23,7 +25,7 @@ onMounted(() => {
           class="right flex"
         >
           <WeatherButton />
-          <SettingButton />
+          <SettingButton @click="loginModal.open" />
         </ul>
       </FadeTransition>
     </div>

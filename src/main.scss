@@ -5,6 +5,8 @@
 @import '@noction/vue-bezier/dist/style.css';
 
 :root {
+    --color-primary: 196, 49%, 55%;
+    --color-secondary: 60, 100%, 93%;
     --text-color: 0, 0%, 12%;
     --bg-home-color: 210, 40%, 96%;
 }
@@ -21,25 +23,25 @@ body,
 [page] {
     padding: 0 !important;
     @apply w-full h-full overflow-hidden;
-    color: hsl(var(--text-color));
+    color: hsla(var(--color-primary), 70%);
 }
 
 
 *::-webkit-scrollbar {
-    background-color: #fff;
+    background-color: hsla(var(--color-primary), 10%);
     width: 5px;
 }
 
 /* background of the scrollbar except button or resizer */
 *::-webkit-scrollbar-track {
-    background-color: #fff;
+    background-color: hsla(var(--color-primary), 10%);
 }
 
 /* scrollbar itself */
 *::-webkit-scrollbar-thumb {
-    background-color: #babac0;
+    background-color: hsl(var(--color-primary));
     border-radius: 16px;
-    border: 1px solid #fff;
+    border: 1px solid hsl(var(--color-primary));
 }
 
 /* set button(top and bottom of the scrollbar) */

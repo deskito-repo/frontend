@@ -9,15 +9,15 @@ const searchStore = useSearchStore();
 const { list } = storeToRefs(useSuggestionStore());
 </script>
 <template>
-  <div>
+  <div class="bg-primary bg-opacity-10">
     <ul
       v-show="list.length"
-      class="py-2 bg-white"
+      class="py-2 text-primary"
     >
       <li
         v-for="{ type, text }, key in list"
         :key="key"
-        class="px-4 h-[50px] leading-[50px] transition-all duration-100 hover:bg-black/5 opacity-70 ease-out hover:opacity-100 cursor-pointer"
+        class="px-4 h-[50px] leading-[50px] transition-all duration-100 hover:bg-primary/10 opacity-70 ease-out hover:opacity-100 cursor-pointer"
         @click="searchStore.search(text)"
       >
         <div

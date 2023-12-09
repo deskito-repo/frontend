@@ -1,5 +1,5 @@
 <template>
-  <div :class="['clock shown']">
+  <div class="clock shown text-primary">
     <b class="time">
       {{ date.hour }}
       <span class="colon">:</span>
@@ -44,7 +44,7 @@ const getTodayDateInfo = (locale: string, date = new Date()) => new Intl.DateTim
 }
 .time {
     font-size: 50px;
-    text-shadow: 0 0 8px #fff;
+    text-shadow: 0 0 8px var(--color-primary);
     white-space: nowrap;
     > .colon {
         animation-name: fade;

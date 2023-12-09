@@ -29,7 +29,7 @@ watch(isShow, (show) => {
       v-model="searchText"
       class="rounded-none"
     />
-    <div class="overflow-y-auto h-full">
+    <div class="overflow-y-auto h-full bg-primary bg-opacity-10">
       <SuggestionList v-if="isShow" />
     </div>
   </div>
