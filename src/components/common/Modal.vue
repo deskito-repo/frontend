@@ -30,7 +30,7 @@ onMounted(async () => {
           <div class="p-5 bg-primary bg-opacity-20">
             <div
               v-if="title"
-              class="text-xl text-primary font-bold mb-4"
+              class="text-xl text-primary font-bold mb-5"
             >
               {{ title }}
             </div>
