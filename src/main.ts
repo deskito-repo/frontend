@@ -1,15 +1,18 @@
 import { createApp } from 'vue';
 import { createPinia } from 'pinia';
 import { createI18n } from 'vue-i18n';
+import { createVfm } from 'vue-final-modal';
 import messages, { locales, type Locale } from './i18n';
 import App from './App.vue';
 import router from './router';
 import './main.scss';
 import '@noction/vue-bezier/dist/style.css';
+import 'vue-final-modal/style.css';
 
 const app = createApp(App)
   .use(createPinia())
   .use(router)
+  .use(createVfm())
   .use(
     createI18n({
       locale: (locales.filter((locale) => navigator.language.includes(locale)))[0] || 'en' satisfies Locale,
