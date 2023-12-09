@@ -1,8 +1,8 @@
-import LoginModal from 'src/components/elements/Auth/LoginModal.vue';
+import SignUpModal from 'src/components/elements/Auth/SignUpModal.vue';
 import { createGlobalState } from '@vueuse/core';
 import { useModal } from './useModal';
 
 const state = createGlobalState(() => useModal({
-  component: LoginModal,
+  component: SignUpModal,
 }));
 export default () => state();

@@ -29,6 +29,7 @@ const _globalOverrides = globalOverrides as any;
       class="w-full"
       v-bind="{
         ...attrs,
+        type: 'primary',
         themeOverrides
       }"
     >

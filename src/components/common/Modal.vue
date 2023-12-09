@@ -17,22 +17,25 @@ onMounted(async () => {
 <template>
   <VueFinalModal
     class="flex justify-center items-center"
+    content-class="content"
     overlay-transition="vfm-fade"
     content-transition="vfm-fade"
   >
     <ModalTransition :duration="300">
-      <div
-        v-show="isMounted"
-        class="board"
-      >
-        <div class="p-5 bg-primary bg-opacity-20">
-          <div
-            v-if="title"
-            class="text-xl text-primary font-bold mb-4"
-          >
-            {{ title }}
+      <div class="px-5 max-w-full">
+        <div
+          v-show="isMounted"
+          class="board"
+        >
+          <div class="p-5 bg-primary bg-opacity-20">
+            <div
+              v-if="title"
+              class="text-xl text-primary font-bold mb-4"
+            >
+              {{ title }}
+            </div>
+            <slot></slot>
           </div>
-          <slot></slot>
         </div>
       </div>
     </ModalTransition>
@@ -41,6 +44,9 @@ onMounted(async () => {
 
 <style>
 .board {
-    @apply bg-white rounded-md shadow-md;
+  @apply bg-white rounded-md shadow-md;
+}
+.content {
+  @apply max-w-full;
 }
 </style>

@@ -5,6 +5,10 @@ import Input from 'src/components/common/Input.vue';
 import { useDialog } from 'src/composables/useDialog';
 import { reactive } from 'vue';
 
+const $emit = defineEmits<{
+  forgotPassword: [],
+  wantTosignUp: [],
+}>();
 const form = reactive({
   email: '',
   password: '',
@@ -16,7 +20,7 @@ const submit = () => {
 </script>
 <template>
   <form
-    class="max-w-md flex flex-col gap-3"
+    class="max-w-full w-[370px] flex flex-col gap-3"
     @submit.prevent="submit"
   >
     <Input
@@ -38,21 +42,24 @@ const submit = () => {
     />
     <div class="flex justify-between items-center gap-3">
       <CheckBox>Remember Me</CheckBox>
-      <a class="text-primary text-opacity-70 hover:text-opacity-100 transition-all">
+      <a
+        class="text-primary text-opacity-70 hover:text-opacity-100 transition-all"
+        @click="$emit('forgotPassword')"
+      >
         Forgot password?
       </a>
     </div>
     <Button
-      :attrs="{
-        type: 'primary',
-        attrType: 'submit',
-      }"
+      :attrs="{ attrType: 'submit' }"
     >
       Login
     </Button>
     <div>
       Don't have an account yet?
-      <a class="text-[1.05rem] text-primary text-opacity-70 hover:text-opacity-100 transition-all">Sign up</a>
+      <a
+        class="text-[1.05rem] text-primary text-opacity-70 hover:text-opacity-100 transition-all"
+        @click="$emit('wantTosignUp')"
+      >Sign up</a>
     </div>
   </form>
 </template>
