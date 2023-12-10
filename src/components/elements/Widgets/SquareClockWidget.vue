@@ -7,13 +7,17 @@
       <span class="colon">:</span>
       {{ formatWithPad(date.sec) }}
     </b>
-    <div class="date">
-      {{ getTodayDateInfo('en') }}
+    <div class="flex justify-center items-center">
+      <div class="date">
+        {{ getTodayDateInfo('en') }}
+      </div>
+      <WeatherButton />
     </div>
   </div>
 </template>
 <script lang="ts" setup>
 import { useCurrentDateStore } from 'src/stores/useCurrentDateStore';
+import WeatherButton from '../StatusBar/WeatherButton.vue';
 
 const { date } = useCurrentDateStore();
 const formatWithPad = (str: string | number) => String(str).padStart(2, '0');

@@ -5,7 +5,7 @@ import CloudIcon from 'src/components/common/icons/CloudIcon.vue';
 const { getWeatherStatusInPlace } = useWeatherStore();
 </script>
 <template>
-  <li class="px-3 h-[50px] leading-[50px] opacity-60 hover:opacity-100 transition-all cursor-pointer">
+  <div class="px-3 h-[50px] leading-[50px] opacity-60 hover:opacity-100 transition-all cursor-pointer flex justify-center items-center">
     <div
       class="flex gap-2 justify-center items-center"
       @click="getWeatherStatusInPlace"
@@ -15,7 +15,7 @@ const { getWeatherStatusInPlace } = useWeatherStore();
         16 °
       </div>
     </div>
-  </li>
+  </div>
 </template>
 <style lang="scss" scoped>
 </style>
