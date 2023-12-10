@@ -16,7 +16,7 @@ const { focused } = useFocus(inputElement);
 </script>
 <template>
   <form
-    :class="focused ? ['ring-opacity-50'] : ['ring-opacity-10']"
+    :class="focused ? ['ring-opacity-20'] : ['ring-opacity-10']"
     class="max-w-xl h-[60px] relative rounded-2xl ring-1 ring-primary overflow-hidden bg-primary bg-opacity-5 transition-all"
     @submit.prevent="submit"
   >
