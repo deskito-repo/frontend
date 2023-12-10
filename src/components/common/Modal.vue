@@ -44,7 +44,7 @@ onMounted(async () => {
 
 <style>
 .board {
-  @apply bg-white rounded-md shadow-md;
+  @apply bg-white rounded-2xl shadow-md;
 }
 .content {
   @apply max-w-full;
