@@ -10,14 +10,10 @@ defineProps<{
 type ButtonThemeOverrides = NonNullable<ButtonProps['themeOverrides']>
 const themeOverrides: ButtonThemeOverrides = {
   heightMedium: '40px',
-  textColor: 'hsl(--color-primary)',
-  color: 'hsl(--color-primary)',
-  border: 'hsl(--color-primary)',
-  colorPrimary: 'hsl(--color-primary)',
 };
 const globalOverrides: GlobalThemeOverrides = {
   common: {
-    primaryColor: 'hsl(var(--color-primary))',
+    primaryColor: 'hsla(var(--color-primary), 50%)',
   },
 };
 // eslint-disable-next-line no-underscore-dangle
@@ -26,7 +22,7 @@ const _globalOverrides = globalOverrides as any;
 <template>
   <NConfigProvider :theme="_globalOverrides">
     <NButton
-      class="w-full"
+      class="w-full rounded-md"
       v-bind="{
         ...attrs,
         type: 'primary',
