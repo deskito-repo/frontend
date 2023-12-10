@@ -57,3 +57,7 @@ body,
     background-color: hsla(var(--color-primary), 100%);
     color: hsla(var(--color-secondary), 100%);
 }
+
+.vfm--overlay {
+    background-color: hsla(0, 0%, 0%, 0.2) !important;
+}

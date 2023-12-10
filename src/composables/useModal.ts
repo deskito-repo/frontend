@@ -6,21 +6,27 @@ import {
 type Props = Parameters<typeof useFinalModal>[0];
 export const useModal = (options?: Props) => {
   let historyTrap: HistoryTrap;
-  const { close, open } = useFinalModal({
+  const attrs = {
+    ...options?.attrs,
+    clickToClose: true,
+    escToClose: true,
+  };
+  const modal = useFinalModal({
     ...options,
-    attrs: {
-      ...options?.attrs,
-      onClose: () => {
-        historyTrap.catch();
-        return close();
-      },
-    },
+    attrs,
   });
+  const close = () => {
+    historyTrap.catch();
+    return modal.close();
+  };
+  attrs.onClose = close;
+  attrs.onClosed = close;
   return {
-    open: () => {
-      historyTrap = new HistoryTrap('modal');
-      historyTrap.onCatch(close);
-      return open();
+    open: (option?: { key: string }) => {
+      const { key } = option || {};
+      historyTrap = new HistoryTrap(key || 'modal');
+      historyTrap.onCatch(modal.close);
+      return modal.open();
     },
     close,
   };
