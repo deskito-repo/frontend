@@ -9,7 +9,7 @@ defineProps<{
 }>();
 const isMounted = ref(false);
 onMounted(async () => {
-  await delay(0);
+  await delay(100);
   isMounted.value = true;
 });
 </script>
@@ -22,11 +22,11 @@ onMounted(async () => {
     content-transition="vfm-fade"
   >
     <ModalTransition :duration="300">
-      <div class="px-5 max-w-full">
-        <div
-          v-show="isMounted"
-          class="board"
-        >
+      <div
+        v-show="isMounted"
+        class="px-5 max-w-full"
+      >
+        <div class="board">
           <div class="p-5 bg-primary bg-opacity-5">
             <div
               v-if="title"
