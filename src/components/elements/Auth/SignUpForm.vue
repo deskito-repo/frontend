@@ -14,6 +14,10 @@ const form = reactive({
   name: '',
   phoneNumber: '',
 });
+const formTitle = {
+  passwordConfirm: 'password confirm',
+  phoneNumber: 'phone number',
+};
 const dialog = useDialog();
 const submit = () => {
   dialog.alert(JSON.stringify(form));
@@ -21,7 +25,7 @@ const submit = () => {
 </script>
 <template>
   <form
-    class="max-w-full w-[370px] flex flex-col gap-3"
+    class="max-w-full w-[370px] flex flex-col gap-2"
     @submit.prevent="submit"
   >
     <template
@@ -30,15 +34,17 @@ const submit = () => {
     >
       <Input
         v-model="form[key]"
-        :label="key"
+        :label="formTitle[key as keyof typeof formTitle] || key"
         :focusOnInit="key === 'email'"
         :attrs="{
-          placeholder: key,
+          placeholder: formTitle[key as keyof typeof formTitle] || key,
           type: ['password', 'email'].includes(key) ? key : 'text'
         }"
       />
     </template>
-    <Button>Sign Up</Button>
+    <div class="mt-6">
+      <Button>Sign Up</Button>
+    </div>
   </form>
 </template>
 <style lang="scss" scoped>
