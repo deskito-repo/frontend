@@ -7,7 +7,7 @@ import Header from './Header.vue';
   <div
     style="
       overflow-y: auto;
-      background-color: hsla(var(--color-primary), .15)
+      background-color: hsla(var(--color-primary), .1)
     "
   >
     <div class="max-w-7xl m-auto">
