@@ -22,6 +22,7 @@ export const useModal = (options?: Props) => {
   attrs.onClose = close;
   attrs.onClosed = close;
   return {
+    ...modal,
     open: (option?: { key: string }) => {
       const { key } = option || {};
       historyTrap = new HistoryTrap(key || 'modal');
