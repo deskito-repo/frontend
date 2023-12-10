@@ -27,7 +27,7 @@ onMounted(async () => {
           v-show="isMounted"
           class="board"
         >
-          <div class="p-5 bg-primary bg-opacity-20">
+          <div class="p-5 bg-primary bg-opacity-5">
             <div
               v-if="title"
               class="text-xl text-primary font-bold mb-5"
