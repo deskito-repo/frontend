@@ -52,3 +52,8 @@ body,
 *::-webkit-scrollbar-button {
     display: none;
 }
+
+::selection {
+    background-color: hsla(var(--color-primary), 100%);
+    color: hsla(var(--color-secondary), 100%);
+}
