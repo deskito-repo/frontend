@@ -9,9 +9,10 @@ import copyFiles from 'rollup-plugin-copy';
 const envPrefixes = ['APP_'];
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
+  const envVars = loadEnv(mode, process.cwd(), envPrefixes);
   const {
     APP_MONOLITHIC_URL = '',
-  } = { ...loadEnv(mode, process.cwd(), envPrefixes) };
+  } = envVars;
   return {
     server: {
       proxy: {
