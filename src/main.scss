@@ -4,12 +4,6 @@
 
 @import '@noction/vue-bezier/dist/style.css';
 
-:root {
-    --color-primary: 196, 49%, 55%;
-    --color-secondary: 60, 100%, 67%;
-    --app-bg-color: 0, 0%, 100%;
-    --app-text-color: 0, 0%, 10%;
-}
 
 html,
 body,
@@ -22,11 +16,24 @@ body,
     color: hsl(var(--app-text-color));
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --app-bg-color: 0, 0%, 10%;
-        --app-text-color: 0, 0%, 100%;
-    }
+// @media (prefers-color-scheme: dark) {
+//     :root {
+//         --app-bg-color: 0, 0%, 10%;
+//         --app-text-color: 0, 0%, 100%;
+//     }
+// }
+
+
+:root {
+    --color-primary: 196, 49%, 55%;
+    --color-secondary: 60, 100%, 67%;
+    --app-bg-color: 0, 0%, 100%;
+    --app-text-color: 0, 0%, 10%;
+}
+
+body.dark {
+    --app-bg-color: 0, 0%, 10%;
+    --app-text-color: 0, 0%, 100%;
 }
 
 * {

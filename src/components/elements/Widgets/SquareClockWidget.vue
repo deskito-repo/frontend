@@ -1,23 +1,28 @@
 <template>
-  <div class="clock shown text-primary">
-    <b class="time">
-      {{ date.hour }}
-      <span class="colon">:</span>
-      {{ formatWithPad(date.minute) }}
-      <span class="colon">:</span>
-      {{ formatWithPad(date.sec) }}
-    </b>
-    <div class="flex justify-center items-center">
-      <div class="date">
-        {{ getTodayDateInfo('en') }}
+  <div class="flex justify-center">
+    <div class="clock shown text-primary">
+      <b class="time">
+        {{ date.hour }}
+        <span class="colon">:</span>
+        {{ formatWithPad(date.minute) }}
+        <span class="colon">:</span>
+        {{ formatWithPad(date.sec) }}
+      </b>
+      <div class="flex justify-center items-center">
+        <div class="date">
+          {{ getTodayDateInfo(localeStore.value) }}
+        </div>
+        <WeatherButton />
       </div>
-      <WeatherButton />
     </div>
   </div>
 </template>
 <script lang="ts" setup>
 import { useCurrentDateStore } from 'src/stores/useCurrentDateStore';
+import { useLocaleStore } from 'src/stores/useLocaleStore';
 import WeatherButton from '../StatusBar/WeatherButton.vue';
+
+const localeStore = useLocaleStore();
 
 const { date } = useCurrentDateStore();
 const formatWithPad = (str: string | number) => String(str).padStart(2, '0');

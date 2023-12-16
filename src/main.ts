@@ -1,8 +1,7 @@
 import { createApp } from 'vue';
 import { createPinia } from 'pinia';
-import { createI18n } from 'vue-i18n';
 import { createVfm } from 'vue-final-modal';
-import messages, { locales, type Locale } from './i18n';
+import { i18n } from 'src/utils/i18n';
 import App from './App.vue';
 import router from './router';
 import './main.scss';
@@ -13,15 +12,7 @@ const app = createApp(App)
   .use(createPinia())
   .use(router)
   .use(createVfm())
-  .use(
-    createI18n({
-      locale: (locales.filter((locale) => navigator.language.includes(locale)))[0] || 'en' satisfies Locale,
-      fallbackLocale: 'en' satisfies Locale,
-      messages,
-      globalInjection: true,
-      legacy: false,
-    }),
-  );
+  .use(i18n);
 router
   .isReady()
   .then(() => app.mount('#app'));

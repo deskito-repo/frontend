@@ -3,6 +3,8 @@ import { ref, onMounted } from 'vue';
 import { FadeTransition } from '@noction/vue-bezier';
 import useLoginModal from 'src/composables/useLoginModal';
 import SettingButton from './SettingButton.vue';
+import ThemeButton from './ThemeButton.vue';
+import I18nButton from './I18nButton.vue';
 
 const loginModal = useLoginModal();
 const isMounted = ref(false);
@@ -23,6 +25,8 @@ onMounted(() => {
           v-show="isMounted"
           class="right flex"
         >
+          <I18nButton />
+          <ThemeButton />
           <SettingButton @click="loginModal.open" />
         </ul>
       </FadeTransition>

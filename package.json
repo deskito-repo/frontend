@@ -5,13 +5,14 @@
   "type": "commonjs",
   "scripts": {
     "app": "pnpm --ignore-workspace-root-check",
-    "dev": "pnpm i && vite --host 0.0.0.0 --port $PORT",
+    "dev": "pnpm i && vue-tsc && vite --host 0.0.0.0 --port $PORT",
     "check": "vue-tsc",
     "build": "pnpm check && vite build",
     "preview": "vite preview",
     "db:migrate": "drizzle-kit generate:sqlite --schema ./src/database/schema/** --out ./src/database/.migrations"
   },
   "dependencies": {
+    "@headlessui/vue": "^1.7.16",
     "@ionic/vue": "^7.5.6",
     "@ionic/vue-router": "^7.5.6",
     "@noction/vue-bezier": "^1.0.5",
