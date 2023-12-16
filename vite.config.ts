@@ -10,6 +10,9 @@ const envPrefixes = ['APP_'];
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
   const envVars = loadEnv(mode, process.cwd(), envPrefixes);
+  if (Object.keys(envVars).length === 0) {
+    throw new Error('plz copy .env.example to .env');
+  }
   const {
     APP_MONOLITHIC_URL = '',
   } = envVars;
