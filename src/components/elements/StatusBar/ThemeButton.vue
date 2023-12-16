@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import ThemeIcon from 'src/components/common/icons/ThemeIcon.vue';
-import { MenuButton } from '@headlessui/vue';
+import { MenuItem } from '@headlessui/vue';
 import { useThemeStore } from 'src/stores/useThemeStore';
 import ButtonTemplate from './ButtonTemplate.vue';
 
@@ -19,9 +19,10 @@ const themeStore = useThemeStore();
       />
     </template>
     <template #buttons>
-      <MenuButton
+      <MenuItem
         v-for="color, key in themes"
         :key="key"
+        as="div"
         class="flex items-center gap-4 relative min-w-[120px] px-5 py-2 bg-primary bg-opacity-40 text-[hsl(var(--app-text-color))]"
         :class="themeStore.value === key && 'text-primary font-bold'"
         @click="themeStore.set(key)"
@@ -31,7 +32,7 @@ const themeStore = useThemeStore();
           class="w-[25px] h-[25px] border-gray-600 border-[3px] rounded-full"
         ></div>
         {{ key }}
-      </MenuButton>
+      </MenuItem>
     </template>
   </ButtonTemplate>
 </template>
