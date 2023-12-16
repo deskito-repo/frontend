@@ -7,9 +7,9 @@ type Props = Parameters<typeof useFinalModal>[0];
 export const useModal = (options?: Props) => {
   let historyTrap: HistoryTrap;
   const attrs = {
-    ...options?.attrs,
     clickToClose: true,
     escToClose: true,
+    ...options?.attrs,
   };
   const modal = useFinalModal({
     ...options,
