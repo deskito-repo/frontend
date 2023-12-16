@@ -3,7 +3,7 @@
     "scss.lint.unknownAtRules": "ignore",
     "typescript.preferences.autoImportFileExcludePatterns": ["vue-router"],
     "editor.codeActionsOnSave": {
-        "source.fixAll": true,
+        "source.fixAll": "explicit"
     },
     "i18n-ally.localesPaths": [
         "src/i18n"
