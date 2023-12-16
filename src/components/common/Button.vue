@@ -13,7 +13,7 @@ const themeOverrides: ButtonThemeOverrides = {
 };
 const globalOverrides: GlobalThemeOverrides = {
   common: {
-    primaryColor: 'hsla(var(--color-primary), 50%)',
+    primaryColor: 'hsla(var(--color-primary), 100%)',
   },
 };
 // eslint-disable-next-line no-underscore-dangle
@@ -33,5 +33,15 @@ const _globalOverrides = globalOverrides as any;
     </NButton>
   </NConfigProvider>
 </template>
-<style lang="scss" scoped>
+<style lang="scss">
+.n-button {
+  background-color: hsla(var(--color-primary), 50%) !important;
+  color: hsla(var(--color-primary, 100%));
+  @apply transition-colors;
+
+  &:hover {
+    background-color: var(--n-color) !important;
+    color: white !important;
+  }
+}
 </style>

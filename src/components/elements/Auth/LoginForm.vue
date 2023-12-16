@@ -20,7 +20,7 @@ const submit = () => {
 </script>
 <template>
   <form
-    class="max-w-full w-[370px] flex flex-col gap-3"
+    class="text-primary max-w-full w-[370px] flex flex-col gap-3"
     @submit.prevent="submit"
   >
     <Input
@@ -43,7 +43,7 @@ const submit = () => {
     <div class="flex justify-between items-center gap-3">
       <CheckBox>Remember Me</CheckBox>
       <a
-        class="text-primary text-opacity-70 hover:text-opacity-100 transition-all"
+        class="text-opacity-70 hover:text-opacity-100 transition-all"
         @click="$emit('forgotPassword')"
       >
         Forgot password?
@@ -57,7 +57,7 @@ const submit = () => {
     <div>
       Don't have an account yet?
       <a
-        class="text-[1.05rem] text-primary text-opacity-70 hover:text-opacity-100 transition-all"
+        class="mx-2 text-[1.05rem] text-primary text-opacity-70 hover:text-opacity-100 transition-all"
         @click="$emit('wantTosignUp')"
       >Sign up</a>
     </div>
