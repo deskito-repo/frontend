@@ -60,6 +60,6 @@ const getTodayDateInfo = (locale: string, date = new Date()) => new Intl.DateTim
 }
 .date {
     font-size: 14px;
-    text-shadow: 0 0 3px #fff;
+    text-shadow: 0 0 3px var(--app-text-color);
 }
 </style>
