@@ -11,5 +11,12 @@ defineProps<{
     <span class="text-primary text-opacity-70"><slot></slot></span>
   </ElCheckbox>
 </template>
-<style lang="scss" scoped>
+<style lang="scss">
+.el-checkbox__input.is-checked .el-checkbox__inner {
+  background-color: hsl(var(--color-primary));
+  border-color: hsl(var(--color-primary));
+}
+.el-checkbox__input.is-checked .el-checkbox__inner::after {
+  border-color: hsl(var(--color-secondary));
+}
 </style>
