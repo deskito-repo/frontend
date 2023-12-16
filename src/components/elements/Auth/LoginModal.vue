@@ -12,7 +12,7 @@ const goToSignUp = async () => {
 };
 </script>
 <template>
-  <Modal title="Sign in to your account">
+  <Modal :title="$t('signin.account')">
     <LoginForm @wantTosignUp="goToSignUp" />
   </Modal>
 </template>

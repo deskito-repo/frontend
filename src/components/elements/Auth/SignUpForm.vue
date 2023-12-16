@@ -14,10 +14,6 @@ const form = reactive({
   name: '',
   phoneNumber: '',
 });
-const formTitle = {
-  passwordConfirm: 'password confirm',
-  phoneNumber: 'phone number',
-};
 const dialog = useDialog();
 const submit = () => {
   dialog.alert(JSON.stringify(form));
@@ -34,10 +30,10 @@ const submit = () => {
     >
       <Input
         v-model="form[key]"
-        :label="formTitle[key as keyof typeof formTitle] || key"
+        :label="$t('general.' + (form[key as keyof typeof form] || key))"
         :focusOnInit="key === 'email'"
         :attrs="{
-          placeholder: formTitle[key as keyof typeof formTitle] || key,
+          placeholder: $t('general.' + (form[key as keyof typeof form] || key)),
           type: ['password', 'email'].includes(key) ? key : 'text'
         }"
       />

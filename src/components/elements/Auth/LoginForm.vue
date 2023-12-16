@@ -25,41 +25,41 @@ const submit = () => {
   >
     <Input
       v-model="form.email"
-      label="email"
+      :label="$t('general.email')"
       :attrs="{
-        placeholder: 'email',
+        placeholder: $t('general.email'),
         type: 'email'
       }"
       focusOnInit
     />
     <Input
       v-model="form.password"
-      label="password"
+      :label="$t('general.password')"
       :attrs="{
-        placeholder: 'password',
+        placeholder: $t('general.password'),
         type: 'password'
       }"
     />
     <div class="flex justify-between items-center gap-3">
-      <CheckBox>Remember Me</CheckBox>
+      <CheckBox>{{ $t('signin.remember') }}</CheckBox>
       <a
         class="text-opacity-70 hover:text-opacity-100 transition-all"
         @click="$emit('forgotPassword')"
       >
-        Forgot password?
+        {{ $t('signin.forgot') }}
       </a>
     </div>
     <Button
       :attrs="{ attrType: 'submit' }"
     >
-      Login
+      {{ $t('general.signin') }}
     </Button>
     <div>
-      Don't have an account yet?
+      {{ $t('signin.not_exist?') }}
       <a
         class="mx-2 text-[1.05rem] text-primary text-opacity-70 hover:text-opacity-100 transition-all"
         @click="$emit('wantTosignUp')"
-      >Sign up</a>
+      >{{ $t('general.signup') }}</a>
     </div>
   </form>
 </template>
