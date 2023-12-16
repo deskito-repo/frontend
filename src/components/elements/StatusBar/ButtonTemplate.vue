@@ -13,7 +13,7 @@ import { SlideYDownTransition as MenuTransition } from '@noction/vue-bezier';
     </MenuButton>
     <MenuTransition>
       <MenuItems
-        class="absolute z-[1] right-0 bg-[hsla(var(--app-bg-color))] rounded-md shadow-md overflow-hidden flex flex-col"
+        class="cursor-pointer absolute z-[1] right-0 bg-[hsla(var(--app-bg-color))] rounded-md shadow-md overflow-hidden flex flex-col"
       >
         <slot name="buttons"></slot>
       </MenuItems>
