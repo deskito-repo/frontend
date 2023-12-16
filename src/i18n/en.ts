@@ -13,7 +13,7 @@ export default {
     nickname: 'nickname',
   },
   signin: {
-    account: 'Sign in to your account',
+    account: 'Signup or login',
     'not_exist?': 'Don\'t have an account yet?',
     forgot: 'Forgot password?',
     remember: 'Remember me',

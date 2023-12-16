@@ -4,7 +4,7 @@ import Form from './SignUpForm.vue';
 
 </script>
 <template>
-  <Modal title="Sign Up">
+  <Modal :title="$t('general.signup')">
     <Form />
   </Modal>
 </template>

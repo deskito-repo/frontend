@@ -8,11 +8,11 @@ const form = reactive({
   email: '',
   nickname: '',
   password: '',
-  passwordConfirm: '',
+  // passwordConfirm: '',
 
   // optional
-  name: '',
-  phoneNumber: '',
+  // name: '',
+  // phoneNumber: '',
 });
 const dialog = useDialog();
 const submit = () => {
@@ -39,7 +39,7 @@ const submit = () => {
       />
     </template>
     <div class="mt-6">
-      <Button>Sign Up</Button>
+      <Button>{{ $t('general.signup') }}</Button>
     </div>
   </form>
 </template>
