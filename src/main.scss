@@ -6,9 +6,27 @@
 
 :root {
     --color-primary: 196, 49%, 55%;
-    --color-secondary: 60, 100%, 93%;
-    --text-color: 0, 0%, 12%;
-    --bg-home-color: 210, 40%, 96%;
+    --color-secondary: 60, 100%, 67%;
+    --app-bg-color: 0, 0%, 100%;
+    --app-text-color: 0, 0%, 10%;
+}
+
+html,
+body,
+#app,
+[page] {
+    padding: 0 !important;
+    @apply w-full h-full overflow-hidden;
+
+    background-color: hsl(var(--app-bg-color));
+    color: hsl(var(--app-text-color));
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --app-bg-color: 0, 0%, 10%;
+        --app-text-color: 0, 0%, 100%;
+    }
 }
 
 * {
@@ -20,16 +38,6 @@
 a {
     @apply hover:underline cursor-pointer
 }
-
-html,
-body,
-#app,
-[page] {
-    padding: 0 !important;
-    @apply w-full h-full overflow-hidden;
-    color: hsla(var(--color-primary), 70%);
-}
-
 
 *::-webkit-scrollbar {
     background-color: hsla(var(--color-primary), 10%);
