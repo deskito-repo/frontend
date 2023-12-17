@@ -1,8 +1,10 @@
 <script lang="ts" setup>
 import { MenuItems, MenuButton, Menu } from '@headlessui/vue';
+import { vSanja } from 'vue3-effect-directive';
 </script>
 <template>
   <Menu
+    v-sanja
     as="div"
     class="relative"
   >

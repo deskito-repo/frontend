@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "useDefineForClassFields": true,
     "module": "ESNext",
     "lib": ["ESNext", "DOM", "DOM.Iterable"],
     "skipLibCheck": true,
@@ -22,9 +21,8 @@
     "paths": {
       "src/*": ["./src/*"],
       "@global/*": ["./global/*"],
-      "vue3-effect-directive": ["./libs/vue3-effect-directive/src/index"]
+      "vue3-effect": ["./libs/vue3-effect/src/*"]
     },
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": ["src/**/*.ts", "src/**/*.d.ts"],
 }
