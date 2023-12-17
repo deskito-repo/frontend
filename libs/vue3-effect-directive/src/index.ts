@@ -1,5 +1,3 @@
-import { useGlobalOption } from './composables/useGlobalOption';
-
 export * from './directives/balloon';
 export * from './directives/sanja';
 export * from './directives/jelena';
