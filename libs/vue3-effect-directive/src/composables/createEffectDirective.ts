@@ -43,7 +43,7 @@ export const createEffectDirective = (localOptions?: EffectOptions): Directive =
         ...options,
       };
       event = () => startEffect(el, allOptions);
-      eventNames = allOptions.events || ['touchstart', 'click'];
+      eventNames = allOptions.events || ['touchstart', 'mousedown'];
       eventNames.forEach((eventName) => el.addEventListener(eventName, event));
     },
     unmounted: (el: HTMLElement) => {
