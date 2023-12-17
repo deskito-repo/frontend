@@ -20,8 +20,6 @@
     "noFallthroughCasesInSwitch": true,
     "paths": {
       "src/*": ["./src/*"],
-      "@global/*": ["./global/*"],
-      "vue3-effect": ["./libs/vue3-effect/src/*"]
     },
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts"],

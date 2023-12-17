@@ -1,31 +1,26 @@
+import { Options } from 'src/types';
 import type { Directive } from 'vue';
+import { useGlobalOption } from './useGlobalOption';
 
-type Options = {
-  /** custom width */
-  width?: number;
-  color?: string;
-  /** animation key */
-  key: string;
-  styles?: string;
+type EffectOptions = Options & { key: string };
 
-  /**
-   * @description
-   * ms
-   * @default 1000
-   * */
-  duration?: number;
-}
-const startEffect = (el: HTMLElement, options: Options) => {
+const startEffect = (el: HTMLElement, options: EffectOptions) => {
+  const globalOption = useGlobalOption();
   const {
     key,
     duration = 1000,
     styles = '',
-  } = options || {};
+    color = 'rgba(111,148,182,0.1)',
+  } = {
+    ...globalOption.get(),
+    ...options,
+  };
   // eslint-disable-next-line no-param-reassign
   el.style.position = 'relative';
   const width = `${options?.width || el.offsetWidth}px`;
   const effectElement = document.createElement('div');
   effectElement.style.cssText = `
+    --effect-color: ${color};
     position: absolute;
     top: 50%;
     left: 50%;
@@ -34,18 +29,17 @@ const startEffect = (el: HTMLElement, options: Options) => {
     height: ${width};
     border-radius: 50%;
     content: '';
-    // opacity: 0;
     pointer-events: none;
     animation: ${key}-effect ${duration}ms ease-out forwards;
   ${styles}`;
   el.append(effectElement);
-  setTimeout(() => effectElement.remove(), duration);
+  // setTimeout(() => effectElement.remove(), duration);
 };
 const events: (keyof GlobalEventHandlersEventMap)[] = ['touchstart', 'click'];
-export const createEffectDirective = (globalOptions?: Options): Directive => {
+export const createEffectDirective = (globalOptions?: EffectOptions): Directive => {
   let event: () => void;
   return {
-    mounted: (el: HTMLElement, { value: options }: Record<'value', Options>) => {
+    mounted: (el: HTMLElement, { value: options }: Record<'value', EffectOptions>) => {
       event = () => startEffect(el, {
         ...globalOptions,
         ...options,
