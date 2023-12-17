@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { MenuItems, MenuButton, Menu } from '@headlessui/vue';
 import { vSanja } from 'vue3-effect-directive';
+import 'vue3-effect-directive/dist/assets/animations/sanja.css';
 </script>
 <template>
   <Menu

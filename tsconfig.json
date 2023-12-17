@@ -21,8 +21,7 @@
     "noFallthroughCasesInSwitch": true,
     "paths": {
       "src/*": ["./src/*"],
-      "@global/*": ["./global/*"],
-      "vue3-effect-directive": ["./libs/vue3-effect-directive/src/index"]
+      "@global/*": ["./global/*"]
     },
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],

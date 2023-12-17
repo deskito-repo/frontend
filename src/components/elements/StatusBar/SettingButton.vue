@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import SettingIcon from 'src/components/common/icons/SettingIcon.vue';
 import { vSanja } from 'vue3-effect-directive';
+import 'vue3-effect-directive/dist/assets/animations/sanja.css';
 </script>
 <template>
   <li

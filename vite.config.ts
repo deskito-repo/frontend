@@ -70,7 +70,6 @@ export default defineConfig(({ mode }) => {
       alias: {
         '@global': path.join(__dirname, './global'),
         src: path.join(__dirname, './src'),
-        'vue3-effect-directive': path.join(__dirname, './libs/vue3-effect-directive/src/index'),
       },
     },
   };
