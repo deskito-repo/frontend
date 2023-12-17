@@ -11,4 +11,5 @@ export type Options = {
      * @default 1000
      * */
     duration?: number;
+    events?: (keyof GlobalEventHandlersEventMap)[];
   }

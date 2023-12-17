@@ -5,16 +5,12 @@ import { useGlobalOption } from './useGlobalOption';
 type EffectOptions = Options & { key: string };
 
 const startEffect = (el: HTMLElement, options: EffectOptions) => {
-  const globalOption = useGlobalOption();
   const {
     key,
     duration = 1000,
     styles = '',
     color = 'rgba(111,148,182,0.1)',
-  } = {
-    ...globalOption.get(),
-    ...options,
-  };
+  } = options;
   // eslint-disable-next-line no-param-reassign
   el.style.position = 'relative';
   const width = `${options?.width || el.offsetWidth}px`;
@@ -35,19 +31,23 @@ const startEffect = (el: HTMLElement, options: EffectOptions) => {
   el.append(effectElement);
   // setTimeout(() => effectElement.remove(), duration);
 };
-const events: (keyof GlobalEventHandlersEventMap)[] = ['touchstart', 'click'];
-export const createEffectDirective = (globalOptions?: EffectOptions): Directive => {
+export const createEffectDirective = (localOptions?: EffectOptions): Directive => {
+  const globalOptions = useGlobalOption();
   let event: () => void;
+  let eventNames: (keyof GlobalEventHandlersEventMap)[];
   return {
     mounted: (el: HTMLElement, { value: options }: Record<'value', EffectOptions>) => {
-      event = () => startEffect(el, {
-        ...globalOptions,
+      const allOptions = {
+        ...globalOptions.get(),
+        ...localOptions,
         ...options,
-      });
-      events.forEach((eventName) => el.addEventListener(eventName, event));
+      };
+      event = () => startEffect(el, allOptions);
+      eventNames = allOptions.events || ['touchstart', 'click'];
+      eventNames.forEach((eventName) => el.addEventListener(eventName, event));
     },
     unmounted: (el: HTMLElement) => {
-      events.forEach((eventName) => el.removeEventListener(eventName, event));
+      eventNames.forEach((eventName) => el.removeEventListener(eventName, event));
     },
   };
 };
