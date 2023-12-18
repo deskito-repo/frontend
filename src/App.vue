@@ -5,8 +5,6 @@ import { useLocaleStore } from './stores/useLocaleStore';
 useLocaleStore();
 </script>
 <template>
-  <RouterView
-    page
-  />
+  <RouterView page />
   <ModalsContainer />
 </template>
