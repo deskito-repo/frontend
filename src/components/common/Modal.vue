@@ -17,7 +17,6 @@ onMounted(async () => {
 <template>
   <VueFinalModal
     class="flex justify-center items-center"
-    content-class="content"
     overlay-transition="vfm-fade"
     content-transition="vfm-fade"
   >
@@ -26,7 +25,7 @@ onMounted(async () => {
         v-show="isMounted"
         class="px-5 max-w-full"
       >
-        <div class="board">
+        <div class="vfm__board">
           <div class="p-5 bg-primary bg-opacity-5">
             <div
               v-if="title"
@@ -43,10 +42,10 @@ onMounted(async () => {
 </template>
 
 <style>
-.board {
+.vfm__board {
   @apply bg-[hsl(var(--app-bg-color))] rounded-2xl shadow-md;
 }
-.content {
+.vfm__content {
   @apply max-w-full;
 }
 </style>
