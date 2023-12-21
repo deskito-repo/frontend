@@ -76,3 +76,14 @@ a {
 .vfm--overlay {
     background-color: hsla(var(--app-text-color), 0.2) !important;
 }
+
+
+.van-dialog,
+.van-dialog__confirm,
+.van-dialog__confirm:active,
+.van-dialog__content--isolated,
+.van-dialog__message,
+.van-button--default {
+    background: hsl(var(--app-bg-color)) !important;
+    color: hsl(var(--app-text-color)) !important;
+}

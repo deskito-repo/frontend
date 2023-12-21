@@ -22,7 +22,7 @@ watch(isShow, (show) => {
 <template>
   <div
     v-show="isShow"
-    class="fixed inset-0 bg-white flex flex-col"
+    class="fixed inset-0 bg-[hsl(var(--app-bg-color))] flex flex-col"
   >
     <SearchBar
       v-model:inputElement="searchInputElement"
