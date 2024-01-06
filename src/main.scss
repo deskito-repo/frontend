@@ -87,3 +87,22 @@ a {
     background: hsl(var(--app-bg-color)) !important;
     color: hsl(var(--app-text-color)) !important;
 }
+
+.v-contextmenu {
+    min-width: 80px !important;
+}
+
+@media (max-width: 640px) {
+    .v-contextmenu {
+        top: unset !important;
+        left: 0 !important;
+        right: 0;
+        bottom: 0;
+        border-radius: 0 !important;
+    }
+
+    .v-contextmenu-item {
+        line-height: 55px !important;
+        height: 55px;
+    }
+}

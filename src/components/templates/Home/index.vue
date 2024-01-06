@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import StatusBar from 'src/components/elements/StatusBar/index.vue';
+import BookmarkBox from 'src/components/elements/BookmarkBox/index.vue';
 import Header from './Header.vue';
-// import Widgets from './Widgets.vue';
 </script>
 <template>
   <div
@@ -14,8 +14,8 @@ import Header from './Header.vue';
       <StatusBar />
       <div class="mb-10">
         <Header />
+        <BookmarkBox class="max-w-xl m-auto" />
       </div>
-      <!-- <Widgets /> -->
     </div>
   </div>
 </template>

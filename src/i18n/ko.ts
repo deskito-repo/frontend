@@ -7,6 +7,7 @@ export default {
   general: {
     email: '이메일',
     name: '이름',
+    address: '주소',
     nickname: '닉네임 (별명)',
     password: '비밀번호',
     passwordConfirm: '비밀번호 확인',
@@ -19,5 +20,8 @@ export default {
     account: '로그인하기',
     forgot: '비밀번호를 잊어버리셨나요?',
     remember: '아이디 저장',
+  },
+  sentence: {
+    not_exist: '{}(을)를 채워주세요',
   },
 } as typeof en;

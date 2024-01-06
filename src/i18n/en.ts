@@ -5,6 +5,7 @@ export default {
   general: {
     name: 'name',
     email: 'email',
+    address: 'address',
     password: 'password',
     passwordConfirm: 'password confirm',
     phoneNumber: 'phone number',
@@ -17,5 +18,8 @@ export default {
     'not_exist?': 'Don\'t have an account yet?',
     forgot: 'Forgot password?',
     remember: 'Remember me',
+  },
+  sentence: {
+    not_exist: '{} is not exist',
   },
 };

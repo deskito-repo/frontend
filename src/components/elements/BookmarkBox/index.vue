@@ -1,9 +1,13 @@
 <script lang="ts" setup>
-import BookmarkGridList from './BookmarkGridList.vue';
+import GridList from './BookmarkGridList.vue';
+import Header from './BookmarkBoxHeader.vue';
 
 </script>
 <template>
-  <BookmarkGridList />
+  <div class="flex flex-col gap-2">
+    <Header />
+    <GridList />
+  </div>
 </template>
 <style lang="scss" scoped>
 </style>
