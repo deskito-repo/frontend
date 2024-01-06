@@ -10,12 +10,18 @@ export const useThemeStore = defineStore('theme', () => {
   const { theme } = toRefs(configStore.value);
   const themes = {
     light: {
-      '--app-text-color': '0, 0%, 10%',
-      '--app-bg-color': '0, 0%, 100%',
+      color: '#fff',
+      style: {
+        '--app-text-color': '0, 0%, 10%',
+        '--app-bg-color': '0, 0%, 100%',
+      },
     },
     dark: {
-      '--app-text-color': '0, 0%, 100%',
-      '--app-bg-color': '0, 0%, 10%',
+      color: '#000',
+      style: {
+        '--app-text-color': '0, 0%, 100%',
+        '--app-bg-color': '0, 0%, 10%',
+      },
     },
   };
   const { css } = useStyleTag('');
@@ -23,13 +29,14 @@ export const useThemeStore = defineStore('theme', () => {
     css.value = '* { transition: all .2s ease-out }';
     theme.value = key;
     Object
-      .entries(themes[key] || themes.light)
+      .entries(themes[key].style || themes.light)
       .map(([key, val]) => useCssVar(key, document.body).value = val);
     delay(250).then(() => css.value = '');
   };
   setTheme(theme.value);
   return {
-    value: computed(() => theme.value),
+    themes: computed(() => themes),
+    currentTheme: computed(() => theme.value),
     set: setTheme,
   };
 });
