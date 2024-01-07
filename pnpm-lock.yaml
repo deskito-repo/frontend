@@ -99,8 +99,8 @@ importers:
         specifier: ^1.8.5
         version: 1.8.20(typescript@5.2.2)
       vue3-effect-directive:
-        specifier: ^0.0.6
-        version: 0.0.6(@algolia/client-search@4.22.0)(@types/node@20.8.8)(postcss@8.4.32)(sass@1.69.4)(search-insights@2.13.0)(typescript@5.2.2)
+        specifier: ^0.2.0
+        version: 0.2.1(@algolia/client-search@4.22.0)(@types/node@20.8.8)(postcss@8.4.32)(sass@1.69.4)(search-insights@2.13.0)(typescript@5.2.2)
       vue3-spinners:
         specifier: ^1.2.2
         version: 1.2.2(vue@3.3.7)
@@ -5568,8 +5568,8 @@ packages:
       typescript: 5.2.2
     dev: false
 
-  /vue3-effect-directive@0.0.6(@algolia/client-search@4.22.0)(@types/node@20.8.8)(postcss@8.4.32)(sass@1.69.4)(search-insights@2.13.0)(typescript@5.2.2):
-    resolution: {integrity: sha512-W2h/CxxaDHzRkgZhg0E0lEeRaiaA9aI5M85ZKXpiHZJ2IQQKxbE7d5PWCJE2PgP3ZsqvQwZ1hwQH0zXJjirkyw==}
+  /vue3-effect-directive@0.2.1(@algolia/client-search@4.22.0)(@types/node@20.8.8)(postcss@8.4.32)(sass@1.69.4)(search-insights@2.13.0)(typescript@5.2.2):
+    resolution: {integrity: sha512-hUX0RVanK06J27Koopstoc/7fDAoh41kzzMJ4CEiBhmwDVblbsAfrAfr5lB11QPXhPEejf/7v7y8Jl89Qr8kjw==}
     dependencies:
       vitepress: 1.0.0-rc.32(@algolia/client-search@4.22.0)(@types/node@20.8.8)(postcss@8.4.32)(sass@1.69.4)(search-insights@2.13.0)(typescript@5.2.2)
     transitivePeerDependencies:
