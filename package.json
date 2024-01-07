@@ -7,7 +7,7 @@
     "app": "pnpm --ignore-workspace-root-check",
     "dev": "pnpm i && vue-tsc && vite --host 0.0.0.0 --port $PORT",
     "check": "vue-tsc",
-    "build": "pnpm check && vite build",
+    "build": "vite build && pnpm check",
     "preview": "vite preview",
     "db:migrate": "drizzle-kit generate:sqlite --schema ./src/database/schema/** --out ./src/database/.migrations"
   },
