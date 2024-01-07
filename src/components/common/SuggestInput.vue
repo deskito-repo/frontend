@@ -4,7 +4,7 @@
 <script lang="ts" setup>
 
 type Props = {
-    secondText?: string;
+  secondText?: string;
 }
 defineProps<Props>();
 const text = defineModel<string>();

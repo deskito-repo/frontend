@@ -109,8 +109,8 @@ importers:
         version: 2.7.1
     devDependencies:
       '@binochoi/eslint-config-typescript':
-        specifier: ^0.0.12
-        version: 0.0.12(@typescript-eslint/eslint-plugin@5.62.0)(eslint-config-airbnb-base@15.0.0)(eslint-plugin-import@2.29.0)
+        specifier: ^0.0.24
+        version: 0.0.24(@typescript-eslint/parser@6.9.0)(eslint@8.52.0)(typescript@5.2.2)
       '@binochoi/eslint-config-vue3':
         specifier: ^0.0.8
         version: 0.0.8(eslint-plugin-vue@9.18.0)
@@ -313,16 +313,19 @@ packages:
       to-fast-properties: 2.0.0
     dev: false
 
-  /@binochoi/eslint-config-typescript@0.0.12(@typescript-eslint/eslint-plugin@5.62.0)(eslint-config-airbnb-base@15.0.0)(eslint-plugin-import@2.29.0):
-    resolution: {integrity: sha512-XMYZ0nqLYv68NHSu6ws1ISc5SXJL0QtPWeE26KtMVOrhAT4et3nEStO6N6bKOq1nbWg0ysyX1hJUOhv2LxoKng==}
-    peerDependencies:
-      '@typescript-eslint/eslint-plugin': ^5.62.0
-      eslint-config-airbnb-base: ^15.0.0
-      eslint-plugin-import: ^2.27.5
+  /@binochoi/eslint-config-typescript@0.0.24(@typescript-eslint/parser@6.9.0)(eslint@8.52.0)(typescript@5.2.2):
+    resolution: {integrity: sha512-tB8wwKfEap9OC0BPBu9bjU5yRK16EFW5X7o91T1M+Ie2fbkeM3A5mwKrqE51UmOnyruaJUaG58UdYQ6i88cfKw==}
     dependencies:
       '@typescript-eslint/eslint-plugin': 5.62.0(@typescript-eslint/parser@6.9.0)(eslint@8.52.0)(typescript@5.2.2)
       eslint-config-airbnb-base: 15.0.0(eslint-plugin-import@2.29.0)(eslint@8.52.0)
       eslint-plugin-import: 2.29.0(@typescript-eslint/parser@6.9.0)(eslint@8.52.0)
+    transitivePeerDependencies:
+      - '@typescript-eslint/parser'
+      - eslint
+      - eslint-import-resolver-typescript
+      - eslint-import-resolver-webpack
+      - supports-color
+      - typescript
     dev: true
 
   /@binochoi/eslint-config-vue3@0.0.8(eslint-plugin-vue@9.18.0):
@@ -3535,7 +3538,7 @@ packages:
       dir-glob: 3.0.1
       fast-glob: 3.3.1
       glob: 7.2.3
-      ignore: 5.2.4
+      ignore: 5.3.0
       merge2: 1.4.1
       slash: 3.0.0
     dev: false
@@ -3547,7 +3550,7 @@ packages:
       array-union: 2.1.0
       dir-glob: 3.0.1
       fast-glob: 3.3.1
-      ignore: 5.2.4
+      ignore: 5.3.0
       merge2: 1.4.1
       slash: 3.0.0
     dev: true
@@ -3714,11 +3717,11 @@ packages:
   /ignore@5.2.4:
     resolution: {integrity: sha512-MAb38BcSbH0eHNBxn7ql2NH/kX33OkB3lZ1BNdh7ENeRChHTYsTvWrMubiIAMNS2llXEEgZ1MUOBtXChP3kaFQ==}
     engines: {node: '>= 4'}
+    dev: true
 
   /ignore@5.3.0:
     resolution: {integrity: sha512-g7dmpshy+gD7mh88OC9NwSGTKoc3kyLAZQRU1mt53Aw/vnvfXnbC+F/7F7QoYVKbV+KNvJx8wArewKy1vXMtlg==}
     engines: {node: '>= 4'}
-    dev: true
 
   /immutable@4.3.4:
     resolution: {integrity: sha512-fsXeu4J4i6WNWSikpI88v/PcVflZz+6kMhUfIwc5SY+poQRPnaf5V7qds6SUyUN3cVxEzuCab7QIoLOQ+DQ1wA==}

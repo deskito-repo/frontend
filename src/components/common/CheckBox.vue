@@ -3,7 +3,7 @@ import { ElCheckbox, CheckboxProps } from 'element-plus';
 import 'element-plus/es/components/checkbox/style/css';
 
 defineProps<{
-    attrs?: CheckboxProps
+  attrs?: CheckboxProps
 }>();
 </script>
 <template>
