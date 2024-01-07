@@ -10,9 +10,9 @@ const model = defineModel();
 // }>();
 const inputRef = ref<HTMLInputElement>();
 const props = defineProps<{
-    label?: string;
-    focusOnInit?: boolean;
-    attrs?: InputHTMLAttributes;
+  label?: string;
+  focusOnInit?: boolean;
+  attrs?: InputHTMLAttributes;
 }>();
 const { focused } = useFocus(inputRef);
 onMounted(() => {

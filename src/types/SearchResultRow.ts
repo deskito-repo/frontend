@@ -1,5 +1,5 @@
 export type SearchResultRow = {
-    type: 'suggestion'
+  type: 'suggestion'
 } | {
-    type: 'history'
+  type: 'history'
 }

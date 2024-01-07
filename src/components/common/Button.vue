@@ -4,7 +4,7 @@ import {
 } from 'naive-ui';
 
 defineProps<{
-    attrs?: ButtonProps
+  attrs?: ButtonProps
 }>();
 
 type ButtonThemeOverrides = NonNullable<ButtonProps['themeOverrides']>
