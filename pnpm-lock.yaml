@@ -63,8 +63,8 @@ importers:
         specifier: ^1.69.4
         version: 1.69.4
       sqlocal:
-        specifier: ^0.6.3
-        version: 0.6.3
+        specifier: ^0.7.0
+        version: 0.7.0
       tailwindcss:
         specifier: ^3.3.4
         version: 3.3.4(ts-node@10.9.1)
@@ -1423,11 +1423,9 @@ packages:
     dev: false
     optional: true
 
-  /@sqlite.org/sqlite-wasm@3.43.2-prebuild1:
-    resolution: {integrity: sha512-46Eu3Ziq/PAK91OwH5zCGqAwKcKjRJr7TbYSAVYkcqBCefRJAboOU2sPKDy8GWCdC+eAHJoq4+AwPf8KkUwMWQ==}
+  /@sqlite.org/sqlite-wasm@3.44.2-build3:
+    resolution: {integrity: sha512-TX6h+Sdd7mSf84qLRvuN6pTxvb6FG/jQ4UJyBG8fpcrcLyCU9I9RGivIT6/KoZBpy61w8g2w3zx5lXCbS1fKkA==}
     hasBin: true
-    optionalDependencies:
-      comlink: 4.4.1
     dev: false
 
   /@stencil/core@4.7.2:
@@ -2523,12 +2521,6 @@ packages:
   /colornames@1.1.1:
     resolution: {integrity: sha512-/pyV40IrsdulWv+wFPmERh9k/mjsPZ64yUMDmWrtj/k1nmgrzzIENWKdaVKyBbvFdQWqkcaRxr+polCo3VMe7A==}
     dev: false
-
-  /comlink@4.4.1:
-    resolution: {integrity: sha512-+1dlx0aY5Jo1vHy/tSsIGpSkN4tS9rZSW8FIhG0JH/crs9wwweswIo/POr451r7bZww3hFbPAKnTpimzL/mm4Q==}
-    requiresBuild: true
-    dev: false
-    optional: true
 
   /comma-separated-tokens@2.0.3:
     resolution: {integrity: sha512-Fu4hJdvzeylCfQPp9SGWidpzrMs7tTrlu6Vb8XGaRGck8QSNZJJp538Wrb60Lax4fPwR64ViY468OIUTbRlGZg==}
@@ -4241,12 +4233,6 @@ packages:
       vueuc: 0.4.51(vue@3.3.7)
     dev: false
 
-  /nanoid@3.3.6:
-    resolution: {integrity: sha512-BGcqMMJuToF7i1rt+2PWSNVnWIkGCU78jBG3RxO/bZlnZPK2Cmi2QaffxGO/2RvWi9sL+FAiRiXMgsyxQ1DIDA==}
-    engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
-    hasBin: true
-    dev: false
-
   /nanoid@3.3.7:
     resolution: {integrity: sha512-eSRppjcPIatRIMC1U6UngP8XFcz8MQWGQdt1MTBQ7NaAmvXDfvNxbvWV3x2y6CdEUciCSsDHDQZbhYaB8QEo2g==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
@@ -4543,7 +4529,7 @@ packages:
     resolution: {integrity: sha512-PS08Iboia9mts/2ygV3eLpY5ghnUcfLV/EXTOW1E2qYxJKGGBUtNjN76FYHnMs36RmARn41bC0AZmn+rR0OVpQ==}
     engines: {node: ^10 || ^12 || >=14}
     dependencies:
-      nanoid: 3.3.6
+      nanoid: 3.3.7
       picocolors: 1.0.0
       source-map-js: 1.0.2
     dev: false
@@ -4848,10 +4834,10 @@ packages:
     resolution: {integrity: sha512-PEGlAwrG8yXGXRjW32fGbg66JAlOAwbObuqVoJpv/mRgoWDQfgH1wDPvtzWyUSNAXBGSk8h755YDbbcEy3SH2Q==}
     dev: false
 
-  /sqlocal@0.6.3:
-    resolution: {integrity: sha512-RR6PijdxwknxiQeJEy9FWaWvT4ilQ0+nmOSYHm/Ce5NzdW2pcUqokkX0vBs7K9jPBdr/+tzEVqVdlsDUC3Iukg==}
+  /sqlocal@0.7.0:
+    resolution: {integrity: sha512-SlMTN5rN9sRVfQ7YoaX3FKSvBNHDC7jvumjc5goncDlg4kl+cvk1Rr7ASDR81XGwnWRhv3e8pNkZI+XWmQ/uTA==}
     dependencies:
-      '@sqlite.org/sqlite-wasm': 3.43.2-prebuild1
+      '@sqlite.org/sqlite-wasm': 3.44.2-build3
       kysely: 0.26.3
       nanoid: 4.0.2
     dev: false
@@ -5734,7 +5720,7 @@ packages:
       chokidar: 3.5.3
       esbuild: 0.17.19
       miniflare: 3.20231030.2
-      nanoid: 3.3.6
+      nanoid: 3.3.7
       path-to-regexp: 6.2.1
       resolve.exports: 2.0.2
       selfsigned: 2.4.1
