@@ -1,11 +1,13 @@
 <script lang="ts" setup>
 import SettingIcon from 'src/components/common/icons/SettingIcon.vue';
-import { vSanja } from 'vue3-effect-directive';
+import { vSanja, type Options } from 'vue3-effect-directive';
 import 'vue3-effect-directive/dist/assets/animations/sanja.css';
+
+const effectOption = { borderRadius: 999 } satisfies Options;
 </script>
 <template>
   <li
-    v-sanja
+    v-sanja="effectOption"
     class="px-3 h-[50px] leading-[50px] opacity-60 hover:opacity-100 transition-all cursor-pointer"
   >
     <div

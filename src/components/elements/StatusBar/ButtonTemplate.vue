@@ -1,11 +1,13 @@
 <script lang="ts" setup>
 import { MenuItems, MenuButton, Menu } from '@headlessui/vue';
-import { vSanja } from 'vue3-effect-directive';
+import { vSanja, type Options } from 'vue3-effect-directive';
 import 'vue3-effect-directive/dist/assets/animations/sanja.css';
+
+const effectOption = { borderRadius: 999 } satisfies Options;
 </script>
 <template>
   <Menu
-    v-sanja
+    v-sanja="effectOption"
     as="div"
     class="relative"
   >
