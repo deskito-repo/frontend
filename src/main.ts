@@ -8,6 +8,9 @@ import router from './router';
 import './main.scss';
 import '@noction/vue-bezier/dist/style.css';
 import 'vue-final-modal/style.css';
+import 'tippy.js/dist/tippy.css';
+import 'tippy.js/themes/translucent.css';
+import 'tippy.js/animations/scale-subtle.css';
 
 const app = createApp(App)
   .use(createPinia())
