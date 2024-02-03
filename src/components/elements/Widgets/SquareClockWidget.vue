@@ -8,7 +8,7 @@
         <span class="colon">:</span>
         {{ formatWithPad(date.sec) }}
       </b>
-      <div class="flex justify-center items-center">
+      <div class="flex gap-3 justify-center items-center">
         <div class="date">
           {{ getTodayDateInfo(localeStore.value) }}
         </div>
