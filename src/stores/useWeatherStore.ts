@@ -14,7 +14,8 @@ export default defineStore('weather', () => {
   const getWeatherStatusInPlace = () => {
     resume();
     if (permission.value === 'denied') {
-      dialog.alert(t('need_browser_permission', { permission: 'geolocation' }));
+      const msg = t('need_browser_permission', { permission: 'geolocation' });
+      dialog.alert(msg);
       return;
     }
     if (error.value) {
