@@ -1,9 +1,9 @@
 <script lang="ts" setup>
-import BookmarkGridList from './BookmarkGridList.vue';
+import BookmarkGridContainer from './BookmarkGridContainer.vue';
 
 </script>
 <template>
-  <BookmarkGridList />
+  <BookmarkGridContainer />
 </template>
 <style lang="scss" scoped>
 </style>

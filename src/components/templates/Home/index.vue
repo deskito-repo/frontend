@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import StatusBar from 'src/components/elements/StatusBar/index.vue';
+import BookmarkBox from 'src/components/elements/BookmarkBox/index.vue';
 import Header from './Header.vue';
 // import Widgets from './Widgets.vue';
 </script>
@@ -15,6 +16,7 @@ import Header from './Header.vue';
       <div class="mb-10">
         <Header />
       </div>
+      <BookmarkBox />
       <!-- <Widgets /> -->
     </div>
   </div>

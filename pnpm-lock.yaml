@@ -86,6 +86,9 @@ importers:
       vue:
         specifier: ^3.3.4
         version: 3.3.7(typescript@5.2.2)
+      vue-draggable-next:
+        specifier: ^2.2.1
+        version: 2.2.1(sortablejs@1.15.2)(vue@3.3.7)
       vue-final-modal:
         specifier: ^4.5.0
         version: 4.5.0(@vueuse/core@10.5.0)(@vueuse/integrations@10.7.0)(focus-trap@7.5.4)(vue@3.3.7)
@@ -100,7 +103,7 @@ importers:
         version: 1.8.20(typescript@5.2.2)
       vue3-effect-directive:
         specifier: ^0.2.0
-        version: 0.2.1(@algolia/client-search@4.22.0)(@types/node@20.8.8)(postcss@8.4.32)(sass@1.69.4)(search-insights@2.13.0)(typescript@5.2.2)
+        version: 0.2.1(@algolia/client-search@4.22.0)(@types/node@20.8.8)(postcss@8.4.32)(sass@1.69.4)(search-insights@2.13.0)(sortablejs@1.15.2)(typescript@5.2.2)
       vue3-spinners:
         specifier: ^1.2.2
         version: 1.2.2(vue@3.3.7)
@@ -2034,7 +2037,7 @@ packages:
       - vue
     dev: false
 
-  /@vueuse/integrations@10.7.0(focus-trap@7.5.4)(vue@3.3.12):
+  /@vueuse/integrations@10.7.0(focus-trap@7.5.4)(sortablejs@1.15.2)(vue@3.3.12):
     resolution: {integrity: sha512-rxiMYgS+91n93qXpHZF9NbHhppWY6IJyVTDxt4acyChL0zZVx7P8FAAfpF1qVK8e4wfjerhpEiMJ0IZ1GWUZ2A==}
     peerDependencies:
       async-validator: '*'
@@ -2078,13 +2081,14 @@ packages:
       '@vueuse/core': 10.7.0(vue@3.3.12)
       '@vueuse/shared': 10.7.0(vue@3.3.12)
       focus-trap: 7.5.4
+      sortablejs: 1.15.2
       vue-demi: 0.14.6(vue@3.3.12)
     transitivePeerDependencies:
       - '@vue/composition-api'
       - vue
     dev: false
 
-  /@vueuse/integrations@10.7.0(focus-trap@7.5.4)(vue@3.3.7):
+  /@vueuse/integrations@10.7.0(focus-trap@7.5.4)(sortablejs@1.15.2)(vue@3.3.7):
     resolution: {integrity: sha512-rxiMYgS+91n93qXpHZF9NbHhppWY6IJyVTDxt4acyChL0zZVx7P8FAAfpF1qVK8e4wfjerhpEiMJ0IZ1GWUZ2A==}
     peerDependencies:
       async-validator: '*'
@@ -2128,6 +2132,7 @@ packages:
       '@vueuse/core': 10.7.0(vue@3.3.7)
       '@vueuse/shared': 10.7.0(vue@3.3.7)
       focus-trap: 7.5.4
+      sortablejs: 1.15.2
       vue-demi: 0.14.6(vue@3.3.7)
     transitivePeerDependencies:
       - '@vue/composition-api'
@@ -4808,6 +4813,10 @@ packages:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}
     engines: {node: '>=8'}
 
+  /sortablejs@1.15.2:
+    resolution: {integrity: sha512-FJF5jgdfvoKn1MAKSdGs33bIqLi3LmsgVTliuX6iITj834F+JRQZN90Z93yql8h0K2t0RwDPBmxwlbZfDcxNZA==}
+    dev: false
+
   /source-map-js@1.0.2:
     resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==}
     engines: {node: '>=0.10.0'}
@@ -5387,7 +5396,7 @@ packages:
       fsevents: 2.3.3
     dev: false
 
-  /vitepress@1.0.0-rc.32(@algolia/client-search@4.22.0)(@types/node@20.8.8)(postcss@8.4.32)(sass@1.69.4)(search-insights@2.13.0)(typescript@5.2.2):
+  /vitepress@1.0.0-rc.32(@algolia/client-search@4.22.0)(@types/node@20.8.8)(postcss@8.4.32)(sass@1.69.4)(search-insights@2.13.0)(sortablejs@1.15.2)(typescript@5.2.2):
     resolution: {integrity: sha512-yf00Skn5BGP+YOQvTbSrB5s9qEb/cV+i+wM5rw+mlaxcIYtK+ORvyBEYZLvKogs7OO70TppJtixb4ofeo5K7HA==}
     hasBin: true
     peerDependencies:
@@ -5405,7 +5414,7 @@ packages:
       '@vitejs/plugin-vue': 4.5.2(vite@5.0.10)(vue@3.3.12)
       '@vue/devtools-api': 6.5.1
       '@vueuse/core': 10.7.0(vue@3.3.12)
-      '@vueuse/integrations': 10.7.0(focus-trap@7.5.4)(vue@3.3.12)
+      '@vueuse/integrations': 10.7.0(focus-trap@7.5.4)(sortablejs@1.15.2)(vue@3.3.12)
       focus-trap: 7.5.4
       mark.js: 8.11.1
       minisearch: 6.3.0
@@ -5482,6 +5491,16 @@ packages:
       vue: 3.3.7(typescript@5.2.2)
     dev: false
 
+  /vue-draggable-next@2.2.1(sortablejs@1.15.2)(vue@3.3.7):
+    resolution: {integrity: sha512-EAMS1IRHF0kZO0o5PMOinsQsXIqsrKT1hKmbICxG3UEtn7zLFkLxlAtajcCcUTisNvQ6TtCB5COjD9a1raNADw==}
+    peerDependencies:
+      sortablejs: ^1.14.0
+      vue: ^3.2.2
+    dependencies:
+      sortablejs: 1.15.2
+      vue: 3.3.7(typescript@5.2.2)
+    dev: false
+
   /vue-eslint-parser@9.3.2(eslint@8.52.0):
     resolution: {integrity: sha512-q7tWyCVaV9f8iQyIA5Mkj/S6AoJ9KBN8IeUSf3XEmBrOtxOZnfTg5s4KClbZBCK3GtnT/+RyCLZyDHuZwTuBjg==}
     engines: {node: ^14.17.0 || >=16.0.0}
@@ -5509,7 +5528,7 @@ packages:
       vue: '>=3.2.0'
     dependencies:
       '@vueuse/core': 10.5.0(vue@3.3.7)
-      '@vueuse/integrations': 10.7.0(focus-trap@7.5.4)(vue@3.3.7)
+      '@vueuse/integrations': 10.7.0(focus-trap@7.5.4)(sortablejs@1.15.2)(vue@3.3.7)
       focus-trap: 7.5.4
       vue: 3.3.7(typescript@5.2.2)
     dev: false
@@ -5554,10 +5573,10 @@ packages:
       typescript: 5.2.2
     dev: false
 
-  /vue3-effect-directive@0.2.1(@algolia/client-search@4.22.0)(@types/node@20.8.8)(postcss@8.4.32)(sass@1.69.4)(search-insights@2.13.0)(typescript@5.2.2):
+  /vue3-effect-directive@0.2.1(@algolia/client-search@4.22.0)(@types/node@20.8.8)(postcss@8.4.32)(sass@1.69.4)(search-insights@2.13.0)(sortablejs@1.15.2)(typescript@5.2.2):
     resolution: {integrity: sha512-hUX0RVanK06J27Koopstoc/7fDAoh41kzzMJ4CEiBhmwDVblbsAfrAfr5lB11QPXhPEejf/7v7y8Jl89Qr8kjw==}
     dependencies:
-      vitepress: 1.0.0-rc.32(@algolia/client-search@4.22.0)(@types/node@20.8.8)(postcss@8.4.32)(sass@1.69.4)(search-insights@2.13.0)(typescript@5.2.2)
+      vitepress: 1.0.0-rc.32(@algolia/client-search@4.22.0)(@types/node@20.8.8)(postcss@8.4.32)(sass@1.69.4)(search-insights@2.13.0)(sortablejs@1.15.2)(typescript@5.2.2)
     transitivePeerDependencies:
       - '@algolia/client-search'
       - '@types/node'
