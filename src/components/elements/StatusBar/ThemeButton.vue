@@ -9,7 +9,7 @@ const themeStore = useThemeStore();
 const { currentTheme, themes } = storeToRefs(themeStore);
 </script>
 <template>
-  <ButtonTemplate>
+  <ButtonTemplate :tippy="{ content: 'theme', placement: 'bottom' }">
     <template #icon>
       <ThemeIcon
         style="color: hsl(var(--color-primary), .7)"

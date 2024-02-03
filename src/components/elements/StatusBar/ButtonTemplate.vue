@@ -1,12 +1,20 @@
 <script lang="ts" setup>
 import { MenuItems, MenuButton, Menu } from '@headlessui/vue';
 import { vSanja, type Options } from 'vue3-effect-directive';
+import { directive as vTippy } from 'vue-tippy';
 import 'vue3-effect-directive/dist/assets/animations/sanja.css';
 
+defineProps<{
+  tippy: {
+    content: string;
+    placement: string;
+  }
+}>();
 const effectOption = { borderRadius: 999 } satisfies Options;
 </script>
 <template>
   <Menu
+    v-tippy="tippy"
     v-sanja="effectOption"
     as="div"
     class="relative"

@@ -19,7 +19,7 @@ const items = {
 };
 </script>
 <template>
-  <ButtonTemplate>
+  <ButtonTemplate :tippy="{ content: 'i18n', placement: 'bottom' }">
     <template #icon>
       <I18nIcon
         style="color: hsl(var(--color-primary), .7)"
