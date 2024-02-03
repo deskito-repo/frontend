@@ -1,6 +1,8 @@
 <script lang="ts" setup>
 import useWeatherStore from 'src/stores/useWeatherStore';
 import { computed } from 'vue';
+import { VueSpinnerTail } from 'vue3-spinners';
+import { FadeTransition } from '@noction/vue-bezier';
 
 const weatherStore = useWeatherStore();
 weatherStore.getWeatherStatusInPlace();
@@ -21,20 +23,23 @@ const icon = computed(() => {
   <div
     class="px-3 h-[50px] leading-[50px] opacity-60 hover:opacity-100 transition-all cursor-pointer flex justify-center items-center"
   >
-    <div
-      v-if="weatherStore.value"
-      class="flex gap-2 justify-center items-center"
-    >
-      <Icon
-        width="24"
-        v-bind="{ icon }"
-      />
+    <FadeTransition>
       <div
-        class="text-sm text-slate-500"
+        v-if="weatherStore.value"
+        class="flex gap-2 justify-center items-center"
       >
-        {{ weatherStore.value?.degree }}°C
+        <Icon
+          width="24"
+          v-bind="{ icon }"
+        />
+        <div
+          class="text-sm text-slate-500"
+        >
+          {{ weatherStore.value?.degree }}°C
+        </div>
       </div>
-    </div>
+    </FadeTransition>
+    <VueSpinnerTail v-if="!weatherStore.value" />
   </div>
 </template>
 <style lang="scss" scoped>
