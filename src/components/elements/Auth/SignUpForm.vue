@@ -30,7 +30,7 @@ const submit = () => {
     >
       <Input
         v-model="form[key]"
-        :label="$t('general.' + (form[key as keyof typeof form] || key))"
+        :label="$t('general.' + key)"
         :focusOnInit="key === 'email'"
         :attrs="{
           placeholder: $t('general.' + (form[key as keyof typeof form] || key)),
