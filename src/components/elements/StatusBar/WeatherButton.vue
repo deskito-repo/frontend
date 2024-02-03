@@ -1,18 +1,38 @@
 <script lang="ts" setup>
 import useWeatherStore from 'src/stores/useWeatherStore';
-import CloudIcon from 'src/components/common/icons/CloudIcon.vue';
+import { computed } from 'vue';
 
-const { getWeatherStatusInPlace } = useWeatherStore();
+const weatherStore = useWeatherStore();
+weatherStore.getWeatherStatusInPlace();
+const icon = computed(() => {
+  switch (weatherStore.value?.weather) {
+  case 'cloud':
+    return 'ic:sharp-wb-cloudy';
+  case 'rain':
+    return 'material-symbols-light:rainy';
+  case 'snow':
+    return 'noto-v1:cloud-with-snow';
+  default:
+    return '';
+  }
+});
 </script>
 <template>
-  <div class="px-3 h-[50px] leading-[50px] opacity-60 hover:opacity-100 transition-all cursor-pointer flex justify-center items-center">
+  <div
+    class="px-3 h-[50px] leading-[50px] opacity-60 hover:opacity-100 transition-all cursor-pointer flex justify-center items-center"
+  >
     <div
+      v-if="weatherStore.value"
       class="flex gap-2 justify-center items-center"
-      @click="getWeatherStatusInPlace"
     >
-      <CloudIcon class="w-[24px]" />
-      <div class="text-xs text-slate-500">
-        16 °
+      <Icon
+        width="24"
+        v-bind="{ icon }"
+      />
+      <div
+        class="text-sm text-slate-500"
+      >
+        {{ weatherStore.value?.degree }}°
       </div>
     </div>
   </div>

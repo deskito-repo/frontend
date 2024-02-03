@@ -12,7 +12,6 @@
         <div class="date">
           {{ getTodayDateInfo(localeStore.value) }}
         </div>
-        <WeatherButton />
       </div>
     </div>
   </div>
@@ -20,7 +19,6 @@
 <script lang="ts" setup>
 import { useCurrentDateStore } from 'src/stores/useCurrentDateStore';
 import { useLocaleStore } from 'src/stores/useLocaleStore';
-import WeatherButton from '../StatusBar/WeatherButton.vue';
 
 const localeStore = useLocaleStore();
 

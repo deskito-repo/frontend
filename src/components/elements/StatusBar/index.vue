@@ -5,6 +5,7 @@ import useLoginModal from 'src/composables/useLoginModal';
 import SettingButton from './SettingButton.vue';
 import ThemeButton from './ThemeButton.vue';
 import I18nButton from './I18nButton.vue';
+import WeatherButton from './WeatherButton.vue';
 
 const loginModal = useLoginModal();
 const isMounted = ref(false);
@@ -14,21 +15,26 @@ onMounted(() => {
 </script>
 <template>
   <div class="h-[50px]">
-    <div class="max-w-6xl m-auto flex justify-between">
-      <div class="left">
-      </div>
+    <div class="max-w-6xl m-auto">
       <FadeTransition
         :delay="500"
         :duration="1000"
       >
-        <ul
+        <div
           v-show="isMounted"
-          class="right flex"
+          class="w-full flex justify-between"
         >
-          <I18nButton />
-          <ThemeButton />
-          <SettingButton @click="loginModal.open" />
-        </ul>
+          <div class="left">
+            <WeatherButton />
+          </div>
+          <ul
+            class="right flex"
+          >
+            <I18nButton />
+            <ThemeButton />
+            <SettingButton @click="loginModal.open" />
+          </ul>
+        </div>
       </FadeTransition>
     </div>
   </div>
