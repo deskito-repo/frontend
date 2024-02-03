@@ -9,7 +9,7 @@ const icon = computed(() => {
   case 'cloud':
     return 'ic:sharp-wb-cloudy';
   case 'rain':
-    return 'material-symbols-light:rainy';
+    return 'material-symbols-light:rainy-light';
   case 'snow':
     return 'noto-v1:cloud-with-snow';
   default:
@@ -32,7 +32,7 @@ const icon = computed(() => {
       <div
         class="text-sm text-slate-500"
       >
-        {{ weatherStore.value?.degree }}°
+        {{ weatherStore.value?.degree }}°C
       </div>
     </div>
   </div>
