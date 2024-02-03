@@ -2,6 +2,7 @@
 import { ref, onMounted } from 'vue';
 import { FadeTransition } from '@noction/vue-bezier';
 import useLoginModal from 'src/composables/useLoginModal';
+import useWeatherStore from 'src/stores/useWeatherStore';
 import SettingButton from './SettingButton.vue';
 import ThemeButton from './ThemeButton.vue';
 import I18nButton from './I18nButton.vue';
@@ -12,12 +13,13 @@ const isMounted = ref(false);
 onMounted(() => {
   isMounted.value = true;
 });
+const weatherStore = useWeatherStore();
 </script>
 <template>
   <div class="h-[50px]">
     <div class="max-w-6xl m-auto">
       <FadeTransition
-        :delay="500"
+        :delay="100"
         :duration="1000"
       >
         <div
@@ -25,7 +27,7 @@ onMounted(() => {
           class="w-full flex justify-between"
         >
           <div class="left">
-            <WeatherButton />
+            <WeatherButton v-if="weatherStore.isGeoPermissionSupported" />
           </div>
           <ul
             class="right flex"

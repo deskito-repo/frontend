@@ -14,7 +14,7 @@ export default defineStore('weather', () => {
     country: string;
   }>();
   const {
-    resume, pause, coords, error,
+    resume, pause, coords, error, isSupported,
   } = useGeolocation({ immediate: false, enableHighAccuracy: true });
   const permission = usePermission('geolocation');
 
@@ -53,5 +53,6 @@ export default defineStore('weather', () => {
       degree: Math.floor(data.value.degree),
     }),
     getWeatherStatusInPlace,
+    isGeoPermissionSupported: isSupported,
   };
 });
