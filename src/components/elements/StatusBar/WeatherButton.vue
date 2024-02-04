@@ -18,7 +18,6 @@ const icon = computed(() => {
     return 'ant-design:thunderbolt-filled';
   case 'drizzle':
     return 'simple-icons:drizzle';
-
   case 'clear':
   default:
     return 'line-md:sunny-filled-loop';
@@ -40,7 +39,7 @@ const icon = computed(() => {
             v-bind="{ icon }"
           />
           <div
-            class="text-sm text-slate-500"
+            class="text-sm text-text"
           >
             {{ weatherStore.value?.degree }}°C
           </div>

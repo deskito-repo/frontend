@@ -32,7 +32,7 @@ whenever(arrowdown, cursorManager.up);
 whenever(arrowup, cursorManager.down);
 </script>
 <template>
-  <div class="bg-primary bg-opacity-10">
+  <div class="bg-primary bg-opacity-20">
     <ul
       v-show="list.length"
       class="py-2 text-primary"
