@@ -8,14 +8,20 @@ const weatherStore = useWeatherStore();
 weatherStore.getWeatherStatusInPlace();
 const icon = computed(() => {
   switch (weatherStore.value?.weather) {
-  case 'cloud':
+  case 'clouds':
     return 'ic:sharp-wb-cloudy';
   case 'rain':
     return 'material-symbols-light:rainy-light';
   case 'snow':
     return 'noto-v1:cloud-with-snow';
+  case 'thunderstorm':
+    return 'ant-design:thunderbolt-filled';
+  case 'drizzle':
+    return 'simple-icons:drizzle';
+
+  case 'clear':
   default:
-    return '';
+    return 'line-md:sunny-filled-loop';
   }
 });
 </script>
