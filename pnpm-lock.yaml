@@ -91,7 +91,7 @@ importers:
         version: 3.3.7(typescript@5.2.2)
       vue-final-modal:
         specifier: ^4.5.0
-        version: 4.5.0(@vueuse/core@10.5.0)(@vueuse/integrations@10.8.0)(focus-trap@7.5.4)(vue@3.3.7)
+        version: 4.5.4(@vueuse/core@10.5.0)(@vueuse/integrations@10.8.0)(focus-trap@7.5.4)(vue@3.3.7)
       vue-i18n:
         specifier: ^9.4.1
         version: 9.4.1(vue@3.3.7)
@@ -5264,8 +5264,8 @@ packages:
       - supports-color
     dev: true
 
-  /vue-final-modal@4.5.0(@vueuse/core@10.5.0)(@vueuse/integrations@10.8.0)(focus-trap@7.5.4)(vue@3.3.7):
-    resolution: {integrity: sha512-MU7wCiOrsYALWj3Lze5yTBYW2ui7HRreLPHscMOc3OihBo906AHXeUTZ8D5sVKh8N3nwTZXgxehcQf3jyO3N3Q==}
+  /vue-final-modal@4.5.4(@vueuse/core@10.5.0)(@vueuse/integrations@10.8.0)(focus-trap@7.5.4)(vue@3.3.7):
+    resolution: {integrity: sha512-wYunoN89Ago2d6p/hevyo4KSfar1HxScllS6FaHujCGyx69fsb40YPGzN17bk9K68daYAgrJ1inxv+fvhIGv5A==}
     peerDependencies:
       '@vueuse/core': '>=10.0.0'
       '@vueuse/integrations': '>=10.0.0'
