@@ -25,7 +25,7 @@
     "autoprefixer": "^10.4.16",
     "dayjs": "^1.11.10",
     "drizzle-kit": "^0.20.6",
-    "drizzle-orm": "^0.29.1",
+    "drizzle-orm": "^0.30.0",
     "element-plus": "^2.4.3",
     "naive-ui": "^2.35.0",
     "pinia": "^2.1.7",
