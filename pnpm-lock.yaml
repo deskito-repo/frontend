@@ -46,7 +46,7 @@ importers:
         version: 0.20.14
       drizzle-orm:
         specifier: ^0.30.0
-        version: 0.30.0
+        version: 0.30.1
       element-plus:
         specifier: ^2.4.3
         version: 2.6.1(vue@3.4.21)
@@ -64,7 +64,7 @@ importers:
         version: 1.71.1
       sqlocal:
         specifier: ^0.7.0
-        version: 0.7.1(drizzle-orm@0.30.0)
+        version: 0.7.1(drizzle-orm@0.30.1)
       tailwindcss:
         specifier: ^3.3.4
         version: 3.4.1(ts-node@10.9.2)
@@ -2402,13 +2402,14 @@ packages:
       - supports-color
     dev: false
 
-  /drizzle-orm@0.30.0:
-    resolution: {integrity: sha512-SupNouCdvosjzQpLinqnyIu7bBfsUKiaWXfUZ0IyDtwK8rWa2zQ4AOWCda86VJVxgb8xZ1l8vKvlLHyTBalB/g==}
+  /drizzle-orm@0.30.1:
+    resolution: {integrity: sha512-5P6CXl4XyWtDDiYOX/jYOJp1HTUmBlXRAwaq+muUOgaSykMEy5sJesCxceMT0oCGvxeWkKfSXo5owLnfKwCIdw==}
     peerDependencies:
       '@aws-sdk/client-rds-data': '>=3'
       '@cloudflare/workers-types': '>=3'
       '@libsql/client': '*'
       '@neondatabase/serverless': '>=0.1'
+      '@op-engineering/op-sqlite': '>=2'
       '@opentelemetry/api': ^1.4.1
       '@planetscale/database': '>=1'
       '@types/better-sqlite3': '*'
@@ -2435,6 +2436,8 @@ packages:
       '@libsql/client':
         optional: true
       '@neondatabase/serverless':
+        optional: true
+      '@op-engineering/op-sqlite':
         optional: true
       '@opentelemetry/api':
         optional: true
@@ -4466,7 +4469,7 @@ packages:
     resolution: {integrity: sha512-PEGlAwrG8yXGXRjW32fGbg66JAlOAwbObuqVoJpv/mRgoWDQfgH1wDPvtzWyUSNAXBGSk8h755YDbbcEy3SH2Q==}
     dev: false
 
-  /sqlocal@0.7.1(drizzle-orm@0.30.0):
+  /sqlocal@0.7.1(drizzle-orm@0.30.1):
     resolution: {integrity: sha512-E2OsznO0Vjuby3p+MWd4WsjJYCiHFSJC5tg/WGEGFPb+UJ+xUsmpwcppl17oI83W3JK5qMTERUICO0hW4shYgA==}
     peerDependencies:
       drizzle-orm: '*'
@@ -4478,7 +4481,7 @@ packages:
         optional: true
     dependencies:
       '@sqlite.org/sqlite-wasm': 3.45.1-build1
-      drizzle-orm: 0.30.0
+      drizzle-orm: 0.30.1
       nanoid: 5.0.6
     dev: false
 
