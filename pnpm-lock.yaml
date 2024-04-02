@@ -46,7 +46,7 @@ importers:
         version: 0.20.14
       drizzle-orm:
         specifier: ^0.30.0
-        version: 0.30.4
+        version: 0.30.6
       element-plus:
         specifier: ^2.4.3
         version: 2.6.2(vue@3.4.21)
@@ -64,7 +64,7 @@ importers:
         version: 1.72.0
       sqlocal:
         specifier: ^0.7.0
-        version: 0.7.1(drizzle-orm@0.30.4)
+        version: 0.7.1(drizzle-orm@0.30.6)
       tailwindcss:
         specifier: ^3.3.4
         version: 3.4.1(ts-node@10.9.2)
@@ -2662,11 +2662,12 @@ packages:
       - supports-color
     dev: false
 
-  /drizzle-orm@0.30.4:
-    resolution: {integrity: sha512-kWoSMGbrOFkmkAweLTFtHJMpN+nwhx89q0mLELqT2aEU+1szNV8jrnBmJwZ0WGNp7J7yQn/ezEtxBI/qzTSElQ==}
+  /drizzle-orm@0.30.6:
+    resolution: {integrity: sha512-8RgNUmY7J03GRuRgBV5SaJNbYgLVPjdSWNS/bRkIMIHt2TFCA439lJsNpqYX8asyKMqkw8ceBiamUnCIXZIt9w==}
     peerDependencies:
       '@aws-sdk/client-rds-data': '>=3'
       '@cloudflare/workers-types': '>=3'
+      '@electric-sql/pglite': '>=0.1.1'
       '@libsql/client': '*'
       '@neondatabase/serverless': '>=0.1'
       '@op-engineering/op-sqlite': '>=2'
@@ -2693,6 +2694,8 @@ packages:
       '@aws-sdk/client-rds-data':
         optional: true
       '@cloudflare/workers-types':
+        optional: true
+      '@electric-sql/pglite':
         optional: true
       '@libsql/client':
         optional: true
@@ -4809,7 +4812,7 @@ packages:
     resolution: {integrity: sha512-PEGlAwrG8yXGXRjW32fGbg66JAlOAwbObuqVoJpv/mRgoWDQfgH1wDPvtzWyUSNAXBGSk8h755YDbbcEy3SH2Q==}
     dev: false
 
-  /sqlocal@0.7.1(drizzle-orm@0.30.4):
+  /sqlocal@0.7.1(drizzle-orm@0.30.6):
     resolution: {integrity: sha512-E2OsznO0Vjuby3p+MWd4WsjJYCiHFSJC5tg/WGEGFPb+UJ+xUsmpwcppl17oI83W3JK5qMTERUICO0hW4shYgA==}
     peerDependencies:
       drizzle-orm: '*'
@@ -4821,7 +4824,7 @@ packages:
         optional: true
     dependencies:
       '@sqlite.org/sqlite-wasm': 3.45.1-build1
-      drizzle-orm: 0.30.4
+      drizzle-orm: 0.30.6
       nanoid: 5.0.6
     dev: false
 
