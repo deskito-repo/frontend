@@ -16,7 +16,7 @@ importers:
         version: 4.1.1(vue@3.4.21)
       '@ionic/vue':
         specifier: ^7.5.6
-        version: 7.8.2
+        version: 7.8.3
       '@ionic/vue-router':
         specifier: ^7.5.6
         version: 7.8.2
@@ -119,7 +119,7 @@ importers:
         version: 0.0.12(@typescript-eslint/eslint-plugin@5.62.0)(eslint-config-airbnb-base@15.0.0)(eslint-plugin-import@2.29.1)
       '@binochoi/eslint-config-vue3':
         specifier: ^0.0.8
-        version: 0.0.8(eslint-plugin-vue@9.24.0)
+        version: 0.0.8(eslint-plugin-vue@9.24.1)
       '@typescript-eslint/parser':
         specifier: ^7.0.0
         version: 7.5.0(eslint@8.57.0)(typescript@5.4.3)
@@ -358,12 +358,12 @@ packages:
       eslint-plugin-import: 2.29.1(@typescript-eslint/parser@7.5.0)(eslint@8.57.0)
     dev: true
 
-  /@binochoi/eslint-config-vue3@0.0.8(eslint-plugin-vue@9.24.0):
+  /@binochoi/eslint-config-vue3@0.0.8(eslint-plugin-vue@9.24.1):
     resolution: {integrity: sha512-ZbKcZorvcpmP3OcqItbtqXo8QMDnQBmV3Ys+RRn4yEqYzHOnzMxB/ZInZzPBEYfSjGr/5tv16WzYkhER7Zz93A==}
     peerDependencies:
       eslint-plugin-vue: ^9.15.1
     dependencies:
-      eslint-plugin-vue: 9.24.0(eslint@8.57.0)
+      eslint-plugin-vue: 9.24.1(eslint@8.57.0)
     dev: true
 
   /@cspotcode/source-map-support@0.8.1:
@@ -1202,7 +1202,15 @@ packages:
   /@ionic/core@7.8.2:
     resolution: {integrity: sha512-1Iwe4XSaEYD0u7U/AnnKYNRXmPxx/doTl6pExXq/nlEd7q0AykRkPEy5rClqrQcJOrgFogAx1FwSObfgm0xnNw==}
     dependencies:
-      '@stencil/core': 4.14.0
+      '@stencil/core': 4.15.0
+      ionicons: 7.3.1
+      tslib: 2.6.2
+    dev: false
+
+  /@ionic/core@7.8.3:
+    resolution: {integrity: sha512-5pFoE8gbhbCuyQlZ7BlRk4+S4PmmqgkALw4IAhtUK1TuzsKJ2KLFBlp0rdlWS+VcKEyrec/ptVki8oN5335vRA==}
+    dependencies:
+      '@stencil/core': 4.15.0
       ionicons: 7.3.1
       tslib: 2.6.2
     dev: false
@@ -1217,6 +1225,13 @@ packages:
     resolution: {integrity: sha512-29M3EB8LXi8P9Zfbko0yXKimWSNbJmyOf/BDzRJHscTwEMq5saa65gF8+Sk0CL4q+a6XiZa6UV4CPooAQ2b1vA==}
     dependencies:
       '@ionic/core': 7.8.2
+      ionicons: 7.3.1
+    dev: false
+
+  /@ionic/vue@7.8.3:
+    resolution: {integrity: sha512-GzHhSus8RT8TGOER6fgpcz29fbMgNn/R65waAPKvO3Kks9ZITtPOtTYM9xNGOHPTKAA5yfAoSch944lmAjMNLg==}
+    dependencies:
+      '@ionic/core': 7.8.3
       ionicons: 7.3.1
     dev: false
 
@@ -1429,8 +1444,8 @@ packages:
     hasBin: true
     dev: false
 
-  /@stencil/core@4.14.0:
-    resolution: {integrity: sha512-+s0u/KsNolXZ7tC2hEMgMA3jaNaqOhZvYKwSzjQbc0Wv+cB481Isxzo7ifgEWRYqsJzNSyqhO6cyu/EJrGGTdg==}
+  /@stencil/core@4.15.0:
+    resolution: {integrity: sha512-C5syM3chCyxX0Os5M+ZWrBujjqwUfrTb87YiLr8RC+kMTmIpnRvvtj8/s3QYDGdDENGRxGkBpeboVh82IGqk0w==}
     engines: {node: '>=16.0.0', npm: '>=7.10.0'}
     hasBin: true
     dev: false
@@ -3130,11 +3145,11 @@ packages:
       - supports-color
     dev: true
 
-  /eslint-plugin-vue@9.24.0(eslint@8.57.0):
-    resolution: {integrity: sha512-9SkJMvF8NGMT9aQCwFc5rj8Wo1XWSMSHk36i7ZwdI614BU7sIOR28ZjuFPKp8YGymZN12BSEbiSwa7qikp+PBw==}
+  /eslint-plugin-vue@9.24.1(eslint@8.57.0):
+    resolution: {integrity: sha512-wk3SuwmS1pZdcuJlokGYEi/buDOwD6KltvhIZyOnpJ/378dcQ4zchu9PAMbbLAaydCz1iYc5AozszcOOgZIIOg==}
     engines: {node: ^14.17.0 || >=16.0.0}
     peerDependencies:
-      eslint: ^6.2.0 || ^7.0.0 || ^8.0.0
+      eslint: ^6.2.0 || ^7.0.0 || ^8.0.0 || ^9.0.0
     dependencies:
       '@eslint-community/eslint-utils': 4.4.0(eslint@8.57.0)
       eslint: 8.57.0
@@ -3731,7 +3746,7 @@ packages:
   /ionicons@7.3.1:
     resolution: {integrity: sha512-1boG4EQTBBpQ4/0PU60Yi78Iw/k8iNtKu9c0NmsbzHGnWAcwpiovG9Wi/rk5UlF+DC+CR4XDCxKo91YqvAxkww==}
     dependencies:
-      '@stencil/core': 4.14.0
+      '@stencil/core': 4.15.0
     dev: false
 
   /is-array-buffer@3.0.4:
