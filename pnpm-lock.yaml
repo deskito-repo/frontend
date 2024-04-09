@@ -46,7 +46,7 @@ importers:
         version: 0.20.14
       drizzle-orm:
         specifier: ^0.30.0
-        version: 0.30.6
+        version: 0.30.7
       element-plus:
         specifier: ^2.4.3
         version: 2.6.3(vue@3.4.21)
@@ -64,7 +64,7 @@ importers:
         version: 1.72.0
       sqlocal:
         specifier: ^0.7.0
-        version: 0.7.1(drizzle-orm@0.30.6)
+        version: 0.7.1(drizzle-orm@0.30.7)
       tailwindcss:
         specifier: ^3.3.4
         version: 3.4.3(ts-node@10.9.2)
@@ -2662,8 +2662,8 @@ packages:
       - supports-color
     dev: false
 
-  /drizzle-orm@0.30.6:
-    resolution: {integrity: sha512-8RgNUmY7J03GRuRgBV5SaJNbYgLVPjdSWNS/bRkIMIHt2TFCA439lJsNpqYX8asyKMqkw8ceBiamUnCIXZIt9w==}
+  /drizzle-orm@0.30.7:
+    resolution: {integrity: sha512-9qefSZQlu2fO2qv24piHyWFWcxcOY15//0v4j8qomMqaxzipNoG+fUBrQ7Ftk7PY7APRbRdn/nkEXWxiI4a8mw==}
     peerDependencies:
       '@aws-sdk/client-rds-data': '>=3'
       '@cloudflare/workers-types': '>=3'
@@ -2677,7 +2677,7 @@ packages:
       '@types/pg': '*'
       '@types/react': '>=18'
       '@types/sql.js': '*'
-      '@vercel/postgres': '*'
+      '@vercel/postgres': '>=0.8.0'
       '@xata.io/client': '*'
       better-sqlite3: '>=7'
       bun-types: '*'
@@ -4794,7 +4794,7 @@ packages:
     resolution: {integrity: sha512-PEGlAwrG8yXGXRjW32fGbg66JAlOAwbObuqVoJpv/mRgoWDQfgH1wDPvtzWyUSNAXBGSk8h755YDbbcEy3SH2Q==}
     dev: false
 
-  /sqlocal@0.7.1(drizzle-orm@0.30.6):
+  /sqlocal@0.7.1(drizzle-orm@0.30.7):
     resolution: {integrity: sha512-E2OsznO0Vjuby3p+MWd4WsjJYCiHFSJC5tg/WGEGFPb+UJ+xUsmpwcppl17oI83W3JK5qMTERUICO0hW4shYgA==}
     peerDependencies:
       drizzle-orm: '*'
@@ -4806,7 +4806,7 @@ packages:
         optional: true
     dependencies:
       '@sqlite.org/sqlite-wasm': 3.45.1-build1
-      drizzle-orm: 0.30.6
+      drizzle-orm: 0.30.7
       nanoid: 5.0.6
     dev: false
 
