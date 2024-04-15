@@ -16,7 +16,7 @@ importers:
         version: 4.1.1(vue@3.4.21)
       '@ionic/vue':
         specifier: ^7.5.6
-        version: 7.8.3
+        version: 7.8.4
       '@ionic/vue-router':
         specifier: ^7.5.6
         version: 7.8.3
@@ -1202,7 +1202,15 @@ packages:
   /@ionic/core@7.8.3:
     resolution: {integrity: sha512-5pFoE8gbhbCuyQlZ7BlRk4+S4PmmqgkALw4IAhtUK1TuzsKJ2KLFBlp0rdlWS+VcKEyrec/ptVki8oN5335vRA==}
     dependencies:
-      '@stencil/core': 4.15.0
+      '@stencil/core': 4.16.0
+      ionicons: 7.3.1
+      tslib: 2.6.2
+    dev: false
+
+  /@ionic/core@7.8.4:
+    resolution: {integrity: sha512-GiQM3Gb1kjaxQyDTQfXd54p/a8cK+ccaYKH30pRpzFMborqCZwhcCUQWV1zNAUuFI8YkC5CWTi6bdHyiYuxw4w==}
+    dependencies:
+      '@stencil/core': 4.16.0
       ionicons: 7.3.1
       tslib: 2.6.2
     dev: false
@@ -1217,6 +1225,13 @@ packages:
     resolution: {integrity: sha512-GzHhSus8RT8TGOER6fgpcz29fbMgNn/R65waAPKvO3Kks9ZITtPOtTYM9xNGOHPTKAA5yfAoSch944lmAjMNLg==}
     dependencies:
       '@ionic/core': 7.8.3
+      ionicons: 7.3.1
+    dev: false
+
+  /@ionic/vue@7.8.4:
+    resolution: {integrity: sha512-x5qRvGo9OSjnROANbicTR1vDIFLSMo2BWSzUCbpLfp3NLbLfgdRfWLFJMbSlI+2RLhZ6d7iACCjSzoayD255cw==}
+    dependencies:
+      '@ionic/core': 7.8.4
       ionicons: 7.3.1
     dev: false
 
@@ -1429,8 +1444,8 @@ packages:
     hasBin: true
     dev: false
 
-  /@stencil/core@4.15.0:
-    resolution: {integrity: sha512-C5syM3chCyxX0Os5M+ZWrBujjqwUfrTb87YiLr8RC+kMTmIpnRvvtj8/s3QYDGdDENGRxGkBpeboVh82IGqk0w==}
+  /@stencil/core@4.16.0:
+    resolution: {integrity: sha512-gXaC5IrquV/Hw5JIZTCWkM5lJEbBQtnvHLhDebjar6A6+YBqxah04dardS+YUNVuRbnE6Hcja7KKiAXT3oVsvw==}
     engines: {node: '>=16.0.0', npm: '>=7.10.0'}
     hasBin: true
     dev: false
@@ -3731,7 +3746,7 @@ packages:
   /ionicons@7.3.1:
     resolution: {integrity: sha512-1boG4EQTBBpQ4/0PU60Yi78Iw/k8iNtKu9c0NmsbzHGnWAcwpiovG9Wi/rk5UlF+DC+CR4XDCxKo91YqvAxkww==}
     dependencies:
-      '@stencil/core': 4.15.0
+      '@stencil/core': 4.16.0
     dev: false
 
   /is-array-buffer@3.0.4:
