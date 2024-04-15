@@ -19,7 +19,7 @@ importers:
         version: 7.8.4
       '@ionic/vue-router':
         specifier: ^7.5.6
-        version: 7.8.3
+        version: 7.8.4
       '@noction/vue-bezier':
         specifier: ^1.0.5
         version: 1.0.5
@@ -1199,14 +1199,6 @@ packages:
     engines: {node: '>= 16'}
     dev: false
 
-  /@ionic/core@7.8.3:
-    resolution: {integrity: sha512-5pFoE8gbhbCuyQlZ7BlRk4+S4PmmqgkALw4IAhtUK1TuzsKJ2KLFBlp0rdlWS+VcKEyrec/ptVki8oN5335vRA==}
-    dependencies:
-      '@stencil/core': 4.16.0
-      ionicons: 7.3.1
-      tslib: 2.6.2
-    dev: false
-
   /@ionic/core@7.8.4:
     resolution: {integrity: sha512-GiQM3Gb1kjaxQyDTQfXd54p/a8cK+ccaYKH30pRpzFMborqCZwhcCUQWV1zNAUuFI8YkC5CWTi6bdHyiYuxw4w==}
     dependencies:
@@ -1215,17 +1207,10 @@ packages:
       tslib: 2.6.2
     dev: false
 
-  /@ionic/vue-router@7.8.3:
-    resolution: {integrity: sha512-xcXW8Af0HmhHBcCY1+iPVQzQoq77m2SFEL1MpTHmfZvh/ouB/AOLtBbup2btY8lOJ+W66S/V8xA/gBgbW0S4Kw==}
+  /@ionic/vue-router@7.8.4:
+    resolution: {integrity: sha512-cXj+cd5t4S0ChatJ5r4Y4isuexxezuqz3+UWNJN4+rfN0zceIfeOrr741bNo2I+jTE8jXJowIA3q+kW0bY5UTQ==}
     dependencies:
-      '@ionic/vue': 7.8.3
-    dev: false
-
-  /@ionic/vue@7.8.3:
-    resolution: {integrity: sha512-GzHhSus8RT8TGOER6fgpcz29fbMgNn/R65waAPKvO3Kks9ZITtPOtTYM9xNGOHPTKAA5yfAoSch944lmAjMNLg==}
-    dependencies:
-      '@ionic/core': 7.8.3
-      ionicons: 7.3.1
+      '@ionic/vue': 7.8.4
     dev: false
 
   /@ionic/vue@7.8.4:
