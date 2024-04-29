@@ -16,7 +16,7 @@ importers:
         version: 4.1.2(vue@3.4.23(typescript@5.4.5))
       '@ionic/vue':
         specifier: ^7.5.6
-        version: 7.8.5
+        version: 7.8.6
       '@ionic/vue-router':
         specifier: ^7.5.6
         version: 7.8.5
@@ -786,11 +786,17 @@ packages:
   '@ionic/core@7.8.5':
     resolution: {integrity: sha512-stnh6wxjsL0ZOEU0F26hki2HcCo8M4XF7yD6WxJqhElG0qq5ytYC/9wpR18pj8GOuNvFtRAV/QFZ7jqWu5NcSQ==}
 
+  '@ionic/core@7.8.6':
+    resolution: {integrity: sha512-HAYZdEmeJgOdo2kDlZkcCGHb+zs/vjU6iv4skbVBL7y+OnSv/oC2u83Yee8S3/aY0YAxkyBgu7hLTYH13Zc2Aw==}
+
   '@ionic/vue-router@7.8.5':
     resolution: {integrity: sha512-KrBcHL91LhXZlc3w1pBc5J4LreaZ978La4G/eG7TWJ/ai+g+nY4/UA2sokQm70/MURIWpjbfdsVl/irQHQ4/Aw==}
 
   '@ionic/vue@7.8.5':
     resolution: {integrity: sha512-m2x9aLnJb3n7zGWFoCIgv1RlNNpTVZ9Tw9EnuaCuwlyYKYQ1KXbCk7qu5ofqKY9UCZ8OZjTRjTZypfDp3VU5zw==}
+
+  '@ionic/vue@7.8.6':
+    resolution: {integrity: sha512-WVngbTA08SlVbyj4rS9krVJ2Z9Uv/MG1xItDS7WqMPeVwRNGaOiw6MkxjXRcpIz6qE0b+6EjIcte5h4nGRiDCw==}
 
   '@isaacs/cliui@8.0.2':
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}
@@ -927,6 +933,11 @@ packages:
 
   '@stencil/core@4.17.0':
     resolution: {integrity: sha512-EtdDJvXfq/mR4l1N4p2P03lF5SB0E6bWtd/yRCCOSsdEsViziALR3QxnflMQRwDN/9R8OhishyuuwUq1s8+zbA==}
+    engines: {node: '>=16.0.0', npm: '>=7.10.0'}
+    hasBin: true
+
+  '@stencil/core@4.17.2':
+    resolution: {integrity: sha512-MX7yaLmpTU9iZvCire9nhecTcE0qBlV0vPWrLMeIXewYN7/hb8B3NjnhQyBKC93FDPI8NBRmt6KIugLw9zcRZg==}
     engines: {node: '>=16.0.0', npm: '>=7.10.0'}
     hasBin: true
 
@@ -3703,6 +3714,12 @@ snapshots:
       ionicons: 7.3.1
       tslib: 2.6.2
 
+  '@ionic/core@7.8.6':
+    dependencies:
+      '@stencil/core': 4.17.2
+      ionicons: 7.3.1
+      tslib: 2.6.2
+
   '@ionic/vue-router@7.8.5':
     dependencies:
       '@ionic/vue': 7.8.5
@@ -3710,6 +3727,11 @@ snapshots:
   '@ionic/vue@7.8.5':
     dependencies:
       '@ionic/core': 7.8.5
+      ionicons: 7.3.1
+
+  '@ionic/vue@7.8.6':
+    dependencies:
+      '@ionic/core': 7.8.6
       ionicons: 7.3.1
 
   '@isaacs/cliui@8.0.2':
@@ -3816,6 +3838,8 @@ snapshots:
   '@stencil/core@4.16.0': {}
 
   '@stencil/core@4.17.0': {}
+
+  '@stencil/core@4.17.2': {}
 
   '@sxzz/popperjs-es@2.11.7': {}
 
