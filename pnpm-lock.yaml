@@ -19,7 +19,7 @@ importers:
         version: 7.8.6
       '@ionic/vue-router':
         specifier: ^7.5.6
-        version: 7.8.5
+        version: 7.8.6
       '@noction/vue-bezier':
         specifier: ^1.0.5
         version: 1.0.5
@@ -783,17 +783,11 @@ packages:
     resolution: {integrity: sha512-ttHCAJkRy7R5W2S9RVnN9KYQYPIpV2+GiS79T4EE37nrPyH6/1SrOh3bmdCRC1T3ocL8qCDx7x2lBJ0xaITU7Q==}
     engines: {node: '>= 16'}
 
-  '@ionic/core@7.8.5':
-    resolution: {integrity: sha512-stnh6wxjsL0ZOEU0F26hki2HcCo8M4XF7yD6WxJqhElG0qq5ytYC/9wpR18pj8GOuNvFtRAV/QFZ7jqWu5NcSQ==}
-
   '@ionic/core@7.8.6':
     resolution: {integrity: sha512-HAYZdEmeJgOdo2kDlZkcCGHb+zs/vjU6iv4skbVBL7y+OnSv/oC2u83Yee8S3/aY0YAxkyBgu7hLTYH13Zc2Aw==}
 
-  '@ionic/vue-router@7.8.5':
-    resolution: {integrity: sha512-KrBcHL91LhXZlc3w1pBc5J4LreaZ978La4G/eG7TWJ/ai+g+nY4/UA2sokQm70/MURIWpjbfdsVl/irQHQ4/Aw==}
-
-  '@ionic/vue@7.8.5':
-    resolution: {integrity: sha512-m2x9aLnJb3n7zGWFoCIgv1RlNNpTVZ9Tw9EnuaCuwlyYKYQ1KXbCk7qu5ofqKY9UCZ8OZjTRjTZypfDp3VU5zw==}
+  '@ionic/vue-router@7.8.6':
+    resolution: {integrity: sha512-YVGqO6yyNBrwxYJfulPCLy6XBBJ0eDiy97XxLbHlaGx9WZJpf+NE+NA7N4Zj+IMTopCAX+YU/PS70OoTM7hITQ==}
 
   '@ionic/vue@7.8.6':
     resolution: {integrity: sha512-WVngbTA08SlVbyj4rS9krVJ2Z9Uv/MG1xItDS7WqMPeVwRNGaOiw6MkxjXRcpIz6qE0b+6EjIcte5h4nGRiDCw==}
@@ -928,11 +922,6 @@ packages:
 
   '@stencil/core@4.16.0':
     resolution: {integrity: sha512-gXaC5IrquV/Hw5JIZTCWkM5lJEbBQtnvHLhDebjar6A6+YBqxah04dardS+YUNVuRbnE6Hcja7KKiAXT3oVsvw==}
-    engines: {node: '>=16.0.0', npm: '>=7.10.0'}
-    hasBin: true
-
-  '@stencil/core@4.17.0':
-    resolution: {integrity: sha512-EtdDJvXfq/mR4l1N4p2P03lF5SB0E6bWtd/yRCCOSsdEsViziALR3QxnflMQRwDN/9R8OhishyuuwUq1s8+zbA==}
     engines: {node: '>=16.0.0', npm: '>=7.10.0'}
     hasBin: true
 
@@ -3708,26 +3697,15 @@ snapshots:
 
   '@intlify/shared@9.10.2': {}
 
-  '@ionic/core@7.8.5':
-    dependencies:
-      '@stencil/core': 4.17.0
-      ionicons: 7.3.1
-      tslib: 2.6.2
-
   '@ionic/core@7.8.6':
     dependencies:
       '@stencil/core': 4.17.2
       ionicons: 7.3.1
       tslib: 2.6.2
 
-  '@ionic/vue-router@7.8.5':
+  '@ionic/vue-router@7.8.6':
     dependencies:
-      '@ionic/vue': 7.8.5
-
-  '@ionic/vue@7.8.5':
-    dependencies:
-      '@ionic/core': 7.8.5
-      ionicons: 7.3.1
+      '@ionic/vue': 7.8.6
 
   '@ionic/vue@7.8.6':
     dependencies:
@@ -3836,8 +3814,6 @@ snapshots:
   '@sqlite.org/sqlite-wasm@3.45.1-build1': {}
 
   '@stencil/core@4.16.0': {}
-
-  '@stencil/core@4.17.0': {}
 
   '@stencil/core@4.17.2': {}
 
