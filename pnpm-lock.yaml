@@ -46,7 +46,7 @@ importers:
         version: 0.20.17
       drizzle-orm:
         specifier: ^0.30.0
-        version: 0.30.8
+        version: 0.30.9
       element-plus:
         specifier: ^2.4.3
         version: 2.6.3(vue@3.4.23(typescript@5.4.5))
@@ -64,7 +64,7 @@ importers:
         version: 1.72.0
       sqlocal:
         specifier: ^0.7.0
-        version: 0.7.1(drizzle-orm@0.30.8)
+        version: 0.7.1(drizzle-orm@0.30.9)
       tailwindcss:
         specifier: ^3.3.4
         version: 3.4.3(ts-node@10.9.2(@types/node@20.12.7)(typescript@5.4.5))
@@ -1611,8 +1611,8 @@ packages:
     resolution: {integrity: sha512-mLVDS4nXmO09wFVlzGrdshWnAL+U9eQGC5zRs6hTN6Q9arwQGWU2XnZ17I8BM8Quau8CQRx3Ms6VPgRWJFVp7Q==}
     hasBin: true
 
-  drizzle-orm@0.30.8:
-    resolution: {integrity: sha512-9pBJA0IjnpPpzZ6s9jlS1CQAbKoBmbn2GJesPhXaVblAA/joOJ4AWWevYcqvLGj9SvThBAl7WscN8Zwgg5mnTw==}
+  drizzle-orm@0.30.9:
+    resolution: {integrity: sha512-VOiCFsexErmgqvNCOmbzmqDCZzZsHoz6SkWAjTFxsTr1AllKDbDJ2+GgedLXsXMDgpg/ljDG1zItIFeZtiO2LA==}
     peerDependencies:
       '@aws-sdk/client-rds-data': '>=3'
       '@cloudflare/workers-types': '>=3'
@@ -4568,7 +4568,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  drizzle-orm@0.30.8: {}
+  drizzle-orm@0.30.9: {}
 
   eastasianwidth@0.2.0: {}
 
@@ -5880,12 +5880,12 @@ snapshots:
 
   space-separated-tokens@2.0.2: {}
 
-  sqlocal@0.7.1(drizzle-orm@0.30.8):
+  sqlocal@0.7.1(drizzle-orm@0.30.9):
     dependencies:
       '@sqlite.org/sqlite-wasm': 3.45.1-build1
       nanoid: 5.0.6
     optionalDependencies:
-      drizzle-orm: 0.30.8
+      drizzle-orm: 0.30.9
 
   string-width@4.2.3:
     dependencies:
