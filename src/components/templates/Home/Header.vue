@@ -5,6 +5,7 @@ import SearchBar from 'src/components/elements/Search/SearchBar.vue';
 import SearchBox from 'src/components/elements/Search/SearchBox.vue';
 import SearchCircleBar from 'src/components/elements/Search/SearchCircleBar.vue';
 import SuggestionBox from 'src/components/elements/Suggestion/SuggestionBox.vue';
+import SimpleDaysWidget from 'src/components/elements/Widgets/SimpleDaysWidget.vue';
 import SquareClockWidget from 'src/components/elements/Widgets/SquareClockWidget.vue';
 import { useDeviceSize } from 'src/composables/useDeviceSize';
 import { useSearchStore } from 'src/stores/useSearchStore';
@@ -32,6 +33,7 @@ onMounted(() => {
 <template>
   <div class="px-5">
     <SquareClockWidget />
+    <SimpleDaysWidget />
     <div class="py-4">
       <SearchBar
         v-model:inputElement="searchInputElement"
