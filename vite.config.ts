@@ -72,5 +72,13 @@ export default defineConfig(({ mode }) => {
         src: path.join(__dirname, './src'),
       },
     },
+    define: {
+
+      /**
+       * chrome extension policy error occurred cause of using `new Function`
+       * @link https://stackoverflow.com/questions/77288512/vite-vue-3-built-project-content-security-policy-error-csp-script-src-self
+       * */
+      __INTLIFY_JIT_COMPILATION__: true,
+    },
   };
 });
