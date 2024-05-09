@@ -22,7 +22,7 @@ importers:
         version: 7.8.6
       '@noction/vue-bezier':
         specifier: ^1.0.5
-        version: 1.0.5
+        version: 1.11.2
       '@types/node':
         specifier: ^20.8.8
         version: 20.12.7
@@ -827,8 +827,8 @@ packages:
   '@juggle/resize-observer@3.4.0':
     resolution: {integrity: sha512-dfLbk+PwWvFzSxwk3n5ySL0hfBog779o8h68wK/7/APo/7cgyWp5jcXockbxdk5kFRkbeXWm4Fbi9FrdN381sA==}
 
-  '@noction/vue-bezier@1.0.5':
-    resolution: {integrity: sha512-vxdomUXg6/TEIAFvj4B5wl5IVXB4CKkStUVWTMoGTonNqJVuq506Q8K6fhR9IzvHkWz4jIEBNh8bJuyfE3rcKQ==}
+  '@noction/vue-bezier@1.11.2':
+    resolution: {integrity: sha512-xgya0r2/v2l4KzFPZOyOqf9BL2EKHYX800EgbTwxkaYa+O39JjVqDwaEoifvCH/iObNVBG/D87EOjiflGEKxMw==}
 
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -2697,6 +2697,11 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
+  semver@7.6.1:
+    resolution: {integrity: sha512-f/vbBsu+fOiYt+lmwZV0rVwJScl46HppnOA1ZvIuBWKOTlllpyJ3bfVax76/OrhCH38dyxoDIA8K7uB963IYgA==}
+    engines: {node: '>=10'}
+    hasBin: true
+
   set-function-length@1.2.2:
     resolution: {integrity: sha512-pgRc4hJ4/sNjWCSS9AmnS40x3bNMDTknHgL5UaMBTMyJnU90EgWh1Rz+MC9eFu4BuN/UwZjKQuY/1v3rM7HMfg==}
     engines: {node: '>= 0.4'}
@@ -3757,7 +3762,7 @@ snapshots:
 
   '@juggle/resize-observer@3.4.0': {}
 
-  '@noction/vue-bezier@1.0.5': {}
+  '@noction/vue-bezier@1.11.2': {}
 
   '@nodelib/fs.scandir@2.1.5':
     dependencies:
@@ -3914,7 +3919,7 @@ snapshots:
       graphemer: 1.4.0
       ignore: 5.3.1
       natural-compare-lite: 1.4.0
-      semver: 7.6.0
+      semver: 7.6.1
       tsutils: 3.21.0(typescript@5.4.5)
     optionalDependencies:
       typescript: 5.4.5
@@ -3967,7 +3972,7 @@ snapshots:
       debug: 4.3.4
       globby: 11.1.0
       is-glob: 4.0.3
-      semver: 7.6.0
+      semver: 7.6.1
       tsutils: 3.21.0(typescript@5.4.5)
     optionalDependencies:
       typescript: 5.4.5
@@ -3999,7 +4004,7 @@ snapshots:
       '@typescript-eslint/typescript-estree': 5.62.0(typescript@5.4.5)
       eslint: 8.57.0
       eslint-scope: 5.1.1
-      semver: 7.6.0
+      semver: 7.6.1
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -4854,7 +4859,7 @@ snapshots:
       natural-compare: 1.4.0
       nth-check: 2.1.1
       postcss-selector-parser: 6.0.16
-      semver: 7.6.0
+      semver: 7.6.1
       vue-eslint-parser: 9.4.2(eslint@8.57.0)
       xml-name-validator: 4.0.0
     transitivePeerDependencies:
@@ -5823,6 +5828,8 @@ snapshots:
     dependencies:
       lru-cache: 6.0.0
 
+  semver@7.6.1: {}
+
   set-function-length@1.2.2:
     dependencies:
       define-data-property: 1.1.4
@@ -6286,7 +6293,7 @@ snapshots:
       espree: 9.6.1
       esquery: 1.5.0
       lodash: 4.17.21
-      semver: 7.6.0
+      semver: 7.6.1
     transitivePeerDependencies:
       - supports-color
 
