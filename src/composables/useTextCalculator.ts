@@ -1,3 +1,5 @@
+import stringMath from 'string-math';
+
 export const useTextCalculator = () => {
   const isValidResult = (text: string) => typeof +text === 'number' && !Number.isNaN(+text);
   /** 문자열이 수학식 계산하는 텍스트인지 판별한다. */
@@ -15,7 +17,7 @@ export const useTextCalculator = () => {
     }
     try {
       // eslint-disable-next-line no-eval
-      const result = String(eval(text));
+      const result = stringMath(text);
       return isValidResult(String(result)) ? result : null;
     } catch {
       return null;
