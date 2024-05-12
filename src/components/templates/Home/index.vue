@@ -19,7 +19,10 @@ import Widgets from './Widgets.vue';
       </div>
       <Widgets v-if="env === 'dev'" />
     </div>
-    <Dock v-if="env === 'dev'" />
+    <Dock
+      v-if="env === 'dev'"
+      class="max-lg:hidden"
+    />
   </div>
 </template>
 <style lang="scss" scoped>
