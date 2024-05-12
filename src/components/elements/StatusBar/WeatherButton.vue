@@ -40,8 +40,7 @@ const tippyOption = !weatherStore.isGeolocationGranted && {
 </script>
 <template>
   <div
-    v-tippy="tippyOption"
-    class="px-3 h-[50px] leading-[50px] opacity-60 hover:opacity-100 transition-all cursor-pointer flex justify-center items-center"
+    class="relative px-3 h-[50px] leading-[50px] opacity-60 hover:opacity-100 transition-all cursor-pointer flex justify-center items-center"
   >
     <div class="w-20 flex justify-center items-center">
       <FadeTransition>
@@ -61,17 +60,18 @@ const tippyOption = !weatherStore.isGeolocationGranted && {
         </div>
       </FadeTransition>
       <VueSpinnerTail v-if="status === 'loading'" />
-      <FadeTransition>
-        <div
-          v-if="!weatherStore.isGeolocationGranted"
-          class="inset absolute opacity-50 text-red-300"
-        >
-          <Icon
-            icon="material-symbols:lock"
-          />
-        </div>
-      </FadeTransition>
     </div>
+    <FadeTransition>
+      <div
+        v-if="!weatherStore.isGeolocationGranted"
+        v-tippy="tippyOption"
+        class="inset-0 absolute opacity-50 text-red-300 flex justify-center items-center"
+      >
+        <Icon
+          icon="material-symbols:lock"
+        />
+      </div>
+    </FadeTransition>
   </div>
 </template>
 <style lang="scss" scoped>
