@@ -61,7 +61,7 @@ const tippyOption = !weatherStore.isGeolocationGranted && {
         </div>
       </FadeTransition>
       <VueSpinnerTail v-if="status === 'loading'" />
-      <FadeTransition :delay="300">
+      <FadeTransition>
         <div
           v-if="!weatherStore.isGeolocationGranted"
           class="inset absolute opacity-50 text-red-300"
