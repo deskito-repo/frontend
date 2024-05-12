@@ -1,7 +1,9 @@
 <script lang="ts" setup>
 import StatusBar from 'src/components/elements/StatusBar/index.vue';
+import Dock from 'src/components/elements/Dock/Dock.vue';
+import { env } from 'src/config';
 import Header from './Header.vue';
-// import Widgets from './Widgets.vue';
+import Widgets from './Widgets.vue';
 </script>
 <template>
   <div
@@ -15,8 +17,9 @@ import Header from './Header.vue';
       <div class="mb-10">
         <Header />
       </div>
-      <!-- <Widgets /> -->
+      <Widgets v-if="env === 'dev'" />
     </div>
+    <Dock v-if="env === 'dev'" />
   </div>
 </template>
 <style lang="scss" scoped>

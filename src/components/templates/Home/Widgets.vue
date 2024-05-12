@@ -4,7 +4,7 @@ import NewsWidget from 'src/components/elements/Widgets/NewsWidget.vue';
 </script>
 <template>
   <div class="px-5">
-    <div class="widget-container max-w-md">
+    <div class="widget-container max-w-sm">
       <NewsWidget />
       <NewsWidget />
     </div>

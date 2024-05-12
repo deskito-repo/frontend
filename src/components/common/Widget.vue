@@ -5,10 +5,10 @@ defineProps<{
 }>();
 </script>
 <template>
-  <div class="w-full p-4 bg-white rounded-md ring-1 ring-black/10">
+  <div class="w-full p-4 bg-opacity-20 rounded-xl text-text bg-background shadow-md">
     <div
       v-if="title"
-      class="text-xl font-bold mb-4"
+      class="text-sm font-bold mb-2"
     >
       {{ title }}
     </div>

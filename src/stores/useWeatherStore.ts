@@ -2,7 +2,7 @@ import { useGeolocation, usePermission } from '@vueuse/core';
 import { defineStore } from 'pinia';
 import { useDialog } from 'src/composables/useDialog';
 import { defineApi } from 'src/utils/defineApi';
-import { computed, ref } from 'vue';
+import { computed, ref, watch } from 'vue';
 import { useI18n } from 'vue-i18n';
 
 export default defineStore('weather', () => {
@@ -14,9 +14,10 @@ export default defineStore('weather', () => {
     country: string;
   }>();
   const {
-    resume, pause, coords, error, isSupported,
+    resume, pause, coords, error,
   } = useGeolocation({ immediate: false, enableHighAccuracy: true });
   const permission = usePermission('geolocation');
+  const isGeolocationGranted = computed(() => permission.value === 'granted');
 
   const dialog = useDialog();
   const { api } = defineApi('/api/weather');
@@ -28,6 +29,9 @@ export default defineStore('weather', () => {
     data.value = await api(`?${queryStr}`).get().json();
   };
   const getWeatherStatusInPlace = () => {
+    if (isGeolocationGranted.value === false) {
+      return;
+    }
     resume();
     if (permission.value === 'denied') {
       const msg = t('need_browser_permission', { permission: 'geolocation' });
@@ -46,6 +50,7 @@ export default defineStore('weather', () => {
       clearInterval(intervalUntilReceiveGeoInfo);
     }, 500);
   };
+  watch(isGeolocationGranted, getWeatherStatusInPlace);
 
   return {
     value: computed(() => data.value && {
@@ -53,6 +58,6 @@ export default defineStore('weather', () => {
       degree: Math.floor(data.value.degree),
     }),
     getWeatherStatusInPlace,
-    isGeoPermissionSupported: isSupported,
+    isGeolocationGranted,
   };
 });

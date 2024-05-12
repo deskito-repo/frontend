@@ -1,5 +1,10 @@
 <script lang="ts" setup>
-const today = new Date().getDay() - 1;
+import { computed } from 'vue';
+/** 월요일이 0이 되는 날짜 구하기 */
+const day = computed(() => {
+  const day = new Date().getDay();
+  return day === 0 ? 6 : day - 1;
+});
 </script>
 <template>
   <div class="m-auto flex justify-center">
@@ -9,7 +14,7 @@ const today = new Date().getDay() - 1;
         :key="i"
         class="square"
         :class="[
-          today === i ? 'opacity-100' : 'opacity-40',
+          day === i ? 'opacity-100' : 'opacity-40',
           i > 4 ? 'bg-secondary' : 'bg-primary'
         ]"
       ></div>

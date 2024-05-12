@@ -1,15 +1,20 @@
 {
     "manifest_version": 3,
-    "name": "desktop-app",
-    "version": "0.0.1",
+    "name": "deskito",
+    "version": "0.0.2",
     "description": "wallpaper for browser",
     "chrome_url_overrides": {
         "newtab": "index.html"
     },
+    "content_security_policy": {
+      "script-src": "self",
+      "object-src": "self"
+    },
     "permissions": [
-      "https://functions-suggest-query-proxy-qkuv642xcq-du.a.run.app/*",
       "tabs",
       "storage",
-      "history"
-    ]
+      "history",
+      "geolocation"
+    ],
+    "host_permissions": ["http://localhost:4124/*"]
 }
