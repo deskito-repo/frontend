@@ -46,6 +46,10 @@ export default defineConfig(({ mode }) => {
             src: './manifest.json',
             dest: 'dist',
           },
+          {
+            src: './newtab.html',
+            dest: 'dist',
+          },
         ],
         hook: 'writeBundle',
       }),
