@@ -121,8 +121,8 @@ importers:
         specifier: ^0.0.12
         version: 0.0.12(@typescript-eslint/eslint-plugin@5.62.0(@typescript-eslint/parser@7.9.0(eslint@8.52.0)(typescript@5.2.2))(eslint@8.52.0)(typescript@5.2.2))(eslint-config-airbnb-base@15.0.0(eslint-plugin-import@2.29.0(@typescript-eslint/parser@7.9.0(eslint@8.52.0)(typescript@5.2.2))(eslint@8.52.0))(eslint@8.52.0))(eslint-plugin-import@2.29.0(@typescript-eslint/parser@7.9.0(eslint@8.52.0)(typescript@5.2.2))(eslint@8.52.0))
       '@binochoi/eslint-config-vue3':
-        specifier: ^0.0.8
-        version: 0.0.8(eslint-plugin-vue@9.18.0(eslint@8.52.0))
+        specifier: ^0.0.14
+        version: 0.0.14(eslint@8.52.0)
       '@types/chrome':
         specifier: ^0.0.268
         version: 0.0.268
@@ -244,10 +244,8 @@ packages:
       eslint-config-airbnb-base: ^15.0.0
       eslint-plugin-import: ^2.27.5
 
-  '@binochoi/eslint-config-vue3@0.0.8':
-    resolution: {integrity: sha512-ZbKcZorvcpmP3OcqItbtqXo8QMDnQBmV3Ys+RRn4yEqYzHOnzMxB/ZInZzPBEYfSjGr/5tv16WzYkhER7Zz93A==}
-    peerDependencies:
-      eslint-plugin-vue: ^9.15.1
+  '@binochoi/eslint-config-vue3@0.0.14':
+    resolution: {integrity: sha512-gJJYH8hh7SZcUbp1zWuhJjqpBwSsk/810OxhSg6IPbuYK/yKywHBwOQBZh8bgZVjkdI7jGZyHoKJIQ/lpk8ciA==}
 
   '@cloudflare/kv-asset-handler@0.2.0':
     resolution: {integrity: sha512-MVbXLbTcAotOPUj0pAMhVtJ+3/kFkwJqc5qNOleOZTv6QkZZABDMS21dSrSlVswEHwrpWC03e4fWytjqKvuE2A==}
@@ -3419,9 +3417,12 @@ snapshots:
       eslint-config-airbnb-base: 15.0.0(eslint-plugin-import@2.29.0(@typescript-eslint/parser@7.9.0(eslint@8.52.0)(typescript@5.2.2))(eslint@8.52.0))(eslint@8.52.0)
       eslint-plugin-import: 2.29.0(@typescript-eslint/parser@7.9.0(eslint@8.52.0)(typescript@5.2.2))(eslint@8.52.0)
 
-  '@binochoi/eslint-config-vue3@0.0.8(eslint-plugin-vue@9.18.0(eslint@8.52.0))':
+  '@binochoi/eslint-config-vue3@0.0.14(eslint@8.52.0)':
     dependencies:
       eslint-plugin-vue: 9.18.0(eslint@8.52.0)
+    transitivePeerDependencies:
+      - eslint
+      - supports-color
 
   '@cloudflare/kv-asset-handler@0.2.0':
     dependencies:
