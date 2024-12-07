@@ -53,7 +53,7 @@
   "devDependencies": {
     "@binochoi/eslint-config-typescript": "^0.0.12",
     "@binochoi/eslint-config-vue3": "^0.0.8",
-    "@types/chrome": "^0.0.268",
+    "@types/chrome": "^0.0.287",
     "@types/string-math": "^1.0.3",
     "@typescript-eslint/parser": "^7.0.0",
     "eslint": "^8.52.0"
