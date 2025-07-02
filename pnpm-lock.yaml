@@ -94,7 +94,7 @@ importers:
         version: 3.3.7(typescript@5.2.2)
       vue-final-modal:
         specifier: ^4.5.0
-        version: 4.5.0(@vueuse/core@10.5.0(vue@3.3.7(typescript@5.2.2)))(@vueuse/integrations@10.7.0(async-validator@4.2.5)(focus-trap@7.5.4)(vue@3.3.7(typescript@5.2.2)))(focus-trap@7.5.4)(vue@3.3.7(typescript@5.2.2))
+        version: 4.5.5(@vueuse/core@10.5.0(vue@3.3.7(typescript@5.2.2)))(@vueuse/integrations@10.7.0(async-validator@4.2.5)(focus-trap@7.5.4)(vue@3.3.7(typescript@5.2.2)))(focus-trap@7.5.4)(vue@3.3.7(typescript@5.2.2))
       vue-i18n:
         specifier: ^9.4.1
         version: 9.14.3(vue@3.3.7(typescript@5.2.2))
@@ -3298,8 +3298,8 @@ packages:
     peerDependencies:
       eslint: '>=6.0.0'
 
-  vue-final-modal@4.5.0:
-    resolution: {integrity: sha512-MU7wCiOrsYALWj3Lze5yTBYW2ui7HRreLPHscMOc3OihBo906AHXeUTZ8D5sVKh8N3nwTZXgxehcQf3jyO3N3Q==}
+  vue-final-modal@4.5.5:
+    resolution: {integrity: sha512-A6xgsXqE6eLw9e6Tq/W6pxDBmimPuSuvq20WL9TOZpZy7itPdGeNn8e1P15PCGqP2yHM3q2gJIchPY9ZJd8YsA==}
     peerDependencies:
       '@vueuse/core': '>=10.0.0'
       '@vueuse/integrations': '>=10.0.0'
@@ -6821,7 +6821,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  vue-final-modal@4.5.0(@vueuse/core@10.5.0(vue@3.3.7(typescript@5.2.2)))(@vueuse/integrations@10.7.0(async-validator@4.2.5)(focus-trap@7.5.4)(vue@3.3.7(typescript@5.2.2)))(focus-trap@7.5.4)(vue@3.3.7(typescript@5.2.2)):
+  vue-final-modal@4.5.5(@vueuse/core@10.5.0(vue@3.3.7(typescript@5.2.2)))(@vueuse/integrations@10.7.0(async-validator@4.2.5)(focus-trap@7.5.4)(vue@3.3.7(typescript@5.2.2)))(focus-trap@7.5.4)(vue@3.3.7(typescript@5.2.2)):
     dependencies:
       '@vueuse/core': 10.5.0(vue@3.3.7(typescript@5.2.2))
       '@vueuse/integrations': 10.7.0(async-validator@4.2.5)(focus-trap@7.5.4)(vue@3.3.7(typescript@5.2.2))
