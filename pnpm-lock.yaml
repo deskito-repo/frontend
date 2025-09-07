@@ -37,10 +37,10 @@ importers:
         version: 10.5.0(vue@3.3.7(typescript@5.2.2))
       autoprefixer:
         specifier: ^10.4.16
-        version: 10.4.21(postcss@8.4.31)
+        version: 10.4.21(postcss@8.4.32)
       dayjs:
         specifier: ^1.11.10
-        version: 1.11.13
+        version: 1.11.18
       drizzle-kit:
         specifier: ^0.20.6
         version: 0.20.6
@@ -109,7 +109,7 @@ importers:
         version: 1.8.20(typescript@5.2.2)
       vue3-effect-directive:
         specifier: ^0.2.0
-        version: 0.2.1(@algolia/client-search@4.22.0)(@types/node@20.8.8)(async-validator@4.2.5)(postcss@8.4.31)(sass@1.69.4)(search-insights@2.13.0)(typescript@5.2.2)
+        version: 0.2.1(@algolia/client-search@4.22.0)(@types/node@20.8.8)(async-validator@4.2.5)(postcss@8.4.32)(sass@1.69.4)(search-insights@2.13.0)(typescript@5.2.2)
       vue3-spinners:
         specifier: ^1.2.2
         version: 1.2.2(vue@3.3.7(typescript@5.2.2))
@@ -754,8 +754,8 @@ packages:
     peerDependencies:
       eslint: ^6.0.0 || ^7.0.0 || >=8.0.0
 
-  '@eslint-community/eslint-utils@4.7.0':
-    resolution: {integrity: sha512-dyybb3AcajC7uha6CvhdVRJqaKyn7w2YKqKyAN37NKYgZT36w+iRb0Dymmc5qEJ549c/S31cMMSFd75bteCpCw==}
+  '@eslint-community/eslint-utils@4.8.0':
+    resolution: {integrity: sha512-MJQFqrZgcW0UNYLGOuQpey/oTN59vyWwplvCGZztn1cKz9agZPPYpJB7h2OMmuu7VLqkvEjN8feFZJmxNF9D+Q==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
       eslint: ^6.0.0 || ^7.0.0 || >=8.0.0
@@ -1037,8 +1037,8 @@ packages:
   '@types/node@20.8.8':
     resolution: {integrity: sha512-YRsdVxq6OaLfmR9Hy816IMp33xOBjfyOgUd77ehqg96CFywxAPbDbXvAsuN2KVg2HOT8Eh6uAfU+l4WffwPVrQ==}
 
-  '@types/semver@7.7.0':
-    resolution: {integrity: sha512-k107IF4+Xr7UHjwDc7Cfd6PRQfbdkiRabXGRjo07b4WyPahFBZCZ1sE+BNxYIJPPg73UkfOsVOLwqVc/6ETrIA==}
+  '@types/semver@7.7.1':
+    resolution: {integrity: sha512-FmgJfu+MOcQ370SD0ev7EI8TlCAfKYU+B4m5T3yXc1CiRN94g/SZPtsCkk506aUDtlMnFZvasDwHHUcZUEaYuA==}
 
   '@types/string-math@1.0.3':
     resolution: {integrity: sha512-Xhk2kx6WhlXRcC+AAjRbDbD8ai0JSHuvDaqe7SZ65OCDOE10NaLnN8VP4eGA+4SlIsjn7hQ+au8WgtvjOY5cQg==}
@@ -1596,8 +1596,8 @@ packages:
     resolution: {integrity: sha512-fnULvOpxnC5/Vg3NCiWelDsLiUc9bRwAPs/+LfTLNvetFCtCTN+yQz15C/fs4AwX1R9K5GLtLfn8QW+dWisaAw==}
     engines: {node: '>=0.11'}
 
-  dayjs@1.11.13:
-    resolution: {integrity: sha512-oaMBel6gjolK862uaPQOVTA7q3TZhuSvuMQAAglQDOWYO9A91IrAOUJEyKVlqJlHE0vq5p5UXxzdPfMH/x6xNg==}
+  dayjs@1.11.18:
+    resolution: {integrity: sha512-zFBQ7WFRvVRhKcWoUh+ZA1g2HVgUbsZm9sbddh8EC5iv93sui8DVVz1Npvz+r6meo9VKfa8NyLWBsQK1VvIKPA==}
 
   de-indent@1.0.2:
     resolution: {integrity: sha512-e/1zu3xH5MQryN2zdVaF0OrdNLUbvWxzMbi+iNA6Bky7l1RoP8a2fIbRocyHclXt/arDrrR6lL3TqFD9pMQTsg==}
@@ -3874,7 +3874,7 @@ snapshots:
       eslint: 8.52.0
       eslint-visitor-keys: 3.4.3
 
-  '@eslint-community/eslint-utils@4.7.0(eslint@8.52.0)':
+  '@eslint-community/eslint-utils@4.8.0(eslint@8.52.0)':
     dependencies:
       eslint: 8.52.0
       eslint-visitor-keys: 3.4.3
@@ -4126,7 +4126,7 @@ snapshots:
     dependencies:
       undici-types: 5.25.3
 
-  '@types/semver@7.7.0': {}
+  '@types/semver@7.7.1': {}
 
   '@types/string-math@1.0.3': {}
 
@@ -4227,9 +4227,9 @@ snapshots:
 
   '@typescript-eslint/utils@5.62.0(eslint@8.52.0)(typescript@5.2.2)':
     dependencies:
-      '@eslint-community/eslint-utils': 4.7.0(eslint@8.52.0)
+      '@eslint-community/eslint-utils': 4.8.0(eslint@8.52.0)
       '@types/json-schema': 7.0.15
-      '@types/semver': 7.7.0
+      '@types/semver': 7.7.1
       '@typescript-eslint/scope-manager': 5.62.0
       '@typescript-eslint/types': 5.62.0
       '@typescript-eslint/typescript-estree': 5.62.0(typescript@5.2.2)
@@ -4639,14 +4639,14 @@ snapshots:
 
   async-validator@4.2.5: {}
 
-  autoprefixer@10.4.21(postcss@8.4.31):
+  autoprefixer@10.4.21(postcss@8.4.32):
     dependencies:
       browserslist: 4.25.0
       caniuse-lite: 1.0.30001724
       fraction.js: 4.3.7
       normalize-range: 0.1.2
       picocolors: 1.1.1
-      postcss: 8.4.31
+      postcss: 8.4.32
       postcss-value-parser: 4.2.0
 
   available-typed-arrays@1.0.7:
@@ -4830,7 +4830,7 @@ snapshots:
     dependencies:
       '@babel/runtime': 7.23.5
 
-  dayjs@1.11.13: {}
+  dayjs@1.11.18: {}
 
   de-indent@1.0.2: {}
 
@@ -4935,7 +4935,7 @@ snapshots:
       '@types/lodash-es': 4.17.12
       '@vueuse/core': 9.13.0(vue@3.3.7(typescript@5.2.2))
       async-validator: 4.2.5
-      dayjs: 1.11.13
+      dayjs: 1.11.18
       escape-html: 1.0.3
       lodash: 4.17.21
       lodash-es: 4.17.21
@@ -5198,7 +5198,7 @@ snapshots:
 
   eslint-plugin-vue@9.18.0(eslint@8.52.0):
     dependencies:
-      '@eslint-community/eslint-utils': 4.7.0(eslint@8.52.0)
+      '@eslint-community/eslint-utils': 4.8.0(eslint@8.52.0)
       eslint: 8.52.0
       natural-compare: 1.4.0
       nth-check: 2.1.1
@@ -6749,7 +6749,7 @@ snapshots:
       fsevents: 2.3.3
       sass: 1.69.4
 
-  vitepress@1.0.0-rc.32(@algolia/client-search@4.22.0)(@types/node@20.8.8)(async-validator@4.2.5)(postcss@8.4.31)(sass@1.69.4)(search-insights@2.13.0)(typescript@5.2.2):
+  vitepress@1.0.0-rc.32(@algolia/client-search@4.22.0)(@types/node@20.8.8)(async-validator@4.2.5)(postcss@8.4.32)(sass@1.69.4)(search-insights@2.13.0)(typescript@5.2.2):
     dependencies:
       '@docsearch/css': 3.5.2
       '@docsearch/js': 3.5.2(@algolia/client-search@4.22.0)(search-insights@2.13.0)
@@ -6767,7 +6767,7 @@ snapshots:
       vite: 5.0.10(@types/node@20.8.8)(sass@1.69.4)
       vue: 3.3.12(typescript@5.2.2)
     optionalDependencies:
-      postcss: 8.4.31
+      postcss: 8.4.32
     transitivePeerDependencies:
       - '@algolia/client-search'
       - '@types/node'
@@ -6857,9 +6857,9 @@ snapshots:
       semver: 7.5.4
       typescript: 5.2.2
 
-  vue3-effect-directive@0.2.1(@algolia/client-search@4.22.0)(@types/node@20.8.8)(async-validator@4.2.5)(postcss@8.4.31)(sass@1.69.4)(search-insights@2.13.0)(typescript@5.2.2):
+  vue3-effect-directive@0.2.1(@algolia/client-search@4.22.0)(@types/node@20.8.8)(async-validator@4.2.5)(postcss@8.4.32)(sass@1.69.4)(search-insights@2.13.0)(typescript@5.2.2):
     dependencies:
-      vitepress: 1.0.0-rc.32(@algolia/client-search@4.22.0)(@types/node@20.8.8)(async-validator@4.2.5)(postcss@8.4.31)(sass@1.69.4)(search-insights@2.13.0)(typescript@5.2.2)
+      vitepress: 1.0.0-rc.32(@algolia/client-search@4.22.0)(@types/node@20.8.8)(async-validator@4.2.5)(postcss@8.4.32)(sass@1.69.4)(search-insights@2.13.0)(typescript@5.2.2)
     transitivePeerDependencies:
       - '@algolia/client-search'
       - '@types/node'
