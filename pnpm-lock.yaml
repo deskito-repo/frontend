@@ -121,8 +121,8 @@ importers:
         specifier: ^0.0.12
         version: 0.0.12(@typescript-eslint/eslint-plugin@5.62.0(@typescript-eslint/parser@7.9.0(eslint@8.52.0)(typescript@5.2.2))(eslint@8.52.0)(typescript@5.2.2))(eslint-config-airbnb-base@15.0.0(eslint-plugin-import@2.29.0(@typescript-eslint/parser@7.9.0(eslint@8.52.0)(typescript@5.2.2))(eslint@8.52.0))(eslint@8.52.0))(eslint-plugin-import@2.29.0(@typescript-eslint/parser@7.9.0(eslint@8.52.0)(typescript@5.2.2))(eslint@8.52.0))
       '@binochoi/eslint-config-vue3':
-        specifier: ^0.0.8
-        version: 0.0.8(eslint-plugin-vue@9.18.0(eslint@8.52.0))
+        specifier: ^0.0.14
+        version: 0.0.14(eslint@8.52.0)
       '@types/chrome':
         specifier: ^0.0.329
         version: 0.0.329
@@ -244,10 +244,8 @@ packages:
       eslint-config-airbnb-base: ^15.0.0
       eslint-plugin-import: ^2.27.5
 
-  '@binochoi/eslint-config-vue3@0.0.8':
-    resolution: {integrity: sha512-ZbKcZorvcpmP3OcqItbtqXo8QMDnQBmV3Ys+RRn4yEqYzHOnzMxB/ZInZzPBEYfSjGr/5tv16WzYkhER7Zz93A==}
-    peerDependencies:
-      eslint-plugin-vue: ^9.15.1
+  '@binochoi/eslint-config-vue3@0.0.14':
+    resolution: {integrity: sha512-gJJYH8hh7SZcUbp1zWuhJjqpBwSsk/810OxhSg6IPbuYK/yKywHBwOQBZh8bgZVjkdI7jGZyHoKJIQ/lpk8ciA==}
 
   '@cloudflare/kv-asset-handler@0.2.0':
     resolution: {integrity: sha512-MVbXLbTcAotOPUj0pAMhVtJ+3/kFkwJqc5qNOleOZTv6QkZZABDMS21dSrSlVswEHwrpWC03e4fWytjqKvuE2A==}
@@ -2882,11 +2880,6 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
-  semver@7.6.2:
-    resolution: {integrity: sha512-FNAIBWCx9qcRhoHcgcJ0gvU7SN1lYU2ZXuSfl04bSC5OpvDHFyJCjdNHomPXxjQlCBU67YW64PzY7/VIEH7F2w==}
-    engines: {node: '>=10'}
-    hasBin: true
-
   semver@7.7.2:
     resolution: {integrity: sha512-RF0Fw+rO5AMf9MAyaRXI4AV0Ulj5lMHqVxxdSgiVbixSCXoEmmX/jk0CuJw4+3SqroYO9VoUh+HcuJivvtJemA==}
     engines: {node: '>=10'}
@@ -3603,9 +3596,12 @@ snapshots:
       eslint-config-airbnb-base: 15.0.0(eslint-plugin-import@2.29.0(@typescript-eslint/parser@7.9.0(eslint@8.52.0)(typescript@5.2.2))(eslint@8.52.0))(eslint@8.52.0)
       eslint-plugin-import: 2.29.0(@typescript-eslint/parser@7.9.0(eslint@8.52.0)(typescript@5.2.2))(eslint@8.52.0)
 
-  '@binochoi/eslint-config-vue3@0.0.8(eslint-plugin-vue@9.18.0(eslint@8.52.0))':
+  '@binochoi/eslint-config-vue3@0.0.14(eslint@8.52.0)':
     dependencies:
       eslint-plugin-vue: 9.18.0(eslint@8.52.0)
+    transitivePeerDependencies:
+      - eslint
+      - supports-color
 
   '@cloudflare/kv-asset-handler@0.2.0':
     dependencies:
@@ -4243,7 +4239,7 @@ snapshots:
       globby: 11.1.0
       is-glob: 4.0.3
       minimatch: 9.0.4
-      semver: 7.6.2
+      semver: 7.7.2
       ts-api-utils: 1.3.0(typescript@5.2.2)
     optionalDependencies:
       typescript: 5.2.2
@@ -4754,7 +4750,7 @@ snapshots:
 
   capnp-ts@0.7.0:
     dependencies:
-      debug: 4.3.4
+      debug: 4.4.1
       tslib: 2.6.2
     transitivePeerDependencies:
       - supports-color
@@ -5100,7 +5096,7 @@ snapshots:
 
   esbuild-register@3.5.0(esbuild@0.19.8):
     dependencies:
-      debug: 4.3.4
+      debug: 4.4.1
       esbuild: 0.19.8
     transitivePeerDependencies:
       - supports-color
@@ -6358,8 +6354,6 @@ snapshots:
   semver@7.5.4:
     dependencies:
       lru-cache: 6.0.0
-
-  semver@7.6.2: {}
 
   semver@7.7.2: {}
 
